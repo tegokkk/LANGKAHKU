@@ -10,7 +10,7 @@ export function contentRoutes(pool, config) {
     res.json({
       items: (
         await pool.query(
-          "SELECT id,name FROM schools WHERE public_registration=true ORDER BY name",
+          "SELECT id,name,academic_options FROM schools WHERE public_registration=true ORDER BY name",
         )
       ).rows,
     }),

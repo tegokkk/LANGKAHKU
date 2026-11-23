@@ -62,10 +62,24 @@ export function authRoutes(pool, config) {
     const id = await transaction(pool, async (db) => {
       const school = await one(
         db,
-        "SELECT id FROM schools WHERE id=$1 AND public_registration=true",
+        "SELECT id,academic_options FROM schools WHERE id=$1 AND public_registration=true",
         [input.schoolCode],
       );
       if (!school) fail(422, "Sekolah tidak menerima pendaftaran.");
+      const allowedGrades =
+        Array.isArray(school.academic_options?.grades) &&
+        school.academic_options.grades.length
+          ? school.academic_options.grades
+          : ["XI", "XII"];
+      const allowedSemesters =
+        Array.isArray(school.academic_options?.semesters) &&
+        school.academic_options.semesters.length
+          ? school.academic_options.semesters
+          : [1, 2];
+      if (!allowedGrades.includes(input.grade))
+        fail(422, "Pilihan kelas tidak tersedia untuk sekolah ini.");
+      if (!allowedSemesters.includes(input.semester))
+        fail(422, "Pilihan semester tidak tersedia untuk sekolah ini.");
       const user = await one(
         db,
         "INSERT INTO users(school_id,username,password_hash,recovery_hash,nickname,role,status) VALUES($1,$2,$3,$4,$5,'siswa','pending_approval') RETURNING id",

@@ -170,8 +170,8 @@ export function studentRoutes(pool, config = { DEMO_MODE: "false" }) {
     const input = z
       .strictObject({
         nickname: z.string().trim().min(2).max(40),
-        grade: z.enum(["XI", "XII"]),
-        semester: z.number().int().min(1).max(2),
+        grade: z.string().trim().min(1).max(40),
+        semester: z.number().int().min(1).max(6),
       })
       .parse(req.body);
     await transaction(pool, async (db) => {

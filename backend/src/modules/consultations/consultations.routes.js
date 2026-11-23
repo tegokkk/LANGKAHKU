@@ -387,5 +387,53 @@ export function consultationRoutes(pool) {
       pages: Math.ceil(total / 20),
     });
   });
+  router.get("/bk/students", authorize("bk"), async (req, res) => {
+    const input = z
+      .object({
+        status: z
+          .enum(["all", "pending_approval", "approved", "rejected", "suspended"])
+          .default("all"),
+        grade: z.string().trim().max(40).default("all"),
+        q: z.string().max(80).default(""),
+        page: z.coerce.number().int().min(1).default(1),
+      })
+      .parse(req.query);
+    const values = [
+      req.user.school_id,
+      input.status,
+      input.grade,
+      `%${input.q}%`,
+    ];
+    const where =
+      "WHERE u.school_id=$1 AND u.role='siswa' AND u.deletion_requested_at IS NULL AND ($2='all' OR u.status=$2) AND ($3='all' OR p.grade=$3) AND (u.nickname ILIKE $4 OR u.username ILIKE $4)";
+    const total = Number(
+      (
+        await one(
+          pool,
+          `SELECT count(*) n FROM users u JOIN student_profiles p ON p.user_id=u.id ${where}`,
+          values,
+        )
+      ).n,
+    );
+    const items = (
+      await pool.query(
+        `SELECT u.id,u.username,u.nickname,u.status,u.created_at,s.name AS school_name,p.grade,p.semester,p.age_band,c.guardian_status,c.student_agreed_at,c.notice_version FROM users u JOIN schools s ON s.id=u.school_id JOIN student_profiles p ON p.user_id=u.id LEFT JOIN consents c ON c.user_id=u.id ${where} ORDER BY u.created_at DESC,u.id DESC LIMIT 20 OFFSET $5`,
+        [...values, (input.page - 1) * 20],
+      )
+    ).rows;
+    const grades = (
+      await pool.query(
+        "SELECT DISTINCT p.grade FROM student_profiles p JOIN users u ON u.id=p.user_id WHERE u.school_id=$1 AND u.role='siswa' AND u.deletion_requested_at IS NULL ORDER BY p.grade",
+        [req.user.school_id],
+      )
+    ).rows.map((r) => r.grade);
+    res.json({
+      items,
+      grades,
+      total,
+      page: input.page,
+      pages: Math.ceil(total / 20),
+    });
+  });
   return router;
 }

@@ -64,6 +64,7 @@ const publicAllPages = [
 
 const bkLinks = [
   ["/bk/permintaan", "Permintaan", MessagesSquare],
+  ["/bk/siswa", "Data siswa", Users],
   ["/bk/riwayat-jawaban", "Riwayat jawaban", FileText],
   ["/bk/agregat", "Agregat kebutuhan", ChartNoAxesCombined],
   ["/bk/kelola", "Konten & layanan", LibraryBig],

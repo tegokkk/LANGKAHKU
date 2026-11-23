@@ -103,6 +103,12 @@ export default function ApprovalsPage() {
           Akun guru BK
         </button>
         <button
+          className={tab === "academic" ? "active" : ""}
+          onClick={() => setTab("academic")}
+        >
+          Sekolah, Kelas & Semester
+        </button>
+        <button
           className={tab === "operations" ? "active" : ""}
           onClick={() => setTab("operations")}
         >
@@ -118,7 +124,9 @@ export default function ApprovalsPage() {
         {(!selected || tab !== "registrations") && notice}
       </Banner>
       <ViewTransition transitionKey={tab}>
-        {tab === "operations" ? (
+        {tab === "academic" ? (
+          <AcademicPanel />
+        ) : tab === "operations" ? (
           <OperationsPanel onCohortsChanged={cohorts.reload} />
         ) : tab === "registrations" ? (
           <>
@@ -710,6 +718,290 @@ function OperationsPanel({ onCohortsChanged }) {
           <Empty title="Belum ada pekerjaan data" />
         )}
       </section>
+    </div>
+  );
+}
+
+function AcademicPanel() {
+  const schools = useResource("/admin/schools"),
+    [selectedId, setSelectedId] = useState(""),
+    [newGrade, setNewGrade] = useState(""),
+    [newSemester, setNewSemester] = useState("1"),
+    [error, setError] = useState(""),
+    [notice, setNotice] = useState(""),
+    [busy, setBusy] = useState(false);
+
+  const items = schools.data?.items || [];
+  const activeSchool =
+    items.find((s) => s.id === selectedId) ||
+    items.find((s) => s.isCurrentSchool) ||
+    items[0] ||
+    null;
+
+  const currentGrades = Array.isArray(activeSchool?.academic_options?.grades)
+    ? activeSchool.academic_options.grades
+    : ["XI", "XII"];
+  const currentSemesters = Array.isArray(
+    activeSchool?.academic_options?.semesters,
+  )
+    ? activeSchool.academic_options.semesters
+    : [1, 2];
+
+  const updateOptions = async (nextGrades, nextSemesters, nextPublic) => {
+    if (!activeSchool) return;
+    setError("");
+    setNotice("");
+    setBusy(true);
+    try {
+      await api(`/admin/schools/${activeSchool.id}/academic-options`, {
+        method: "PATCH",
+        body: {
+          grades: nextGrades,
+          semesters: nextSemesters,
+          publicRegistration:
+            nextPublic !== undefined
+              ? nextPublic
+              : activeSchool.public_registration,
+        },
+      });
+      setNotice("Pengaturan sekolah, kelas, dan semester tersimpan.");
+      await schools.reload();
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <div className="stack">
+      <Banner type="error">{error || schools.error}</Banner>
+      <Banner type="success">{notice}</Banner>
+      <div className="two-grid">
+        <form
+          className="surface card stack"
+          onSubmit={async (e) => {
+            e.preventDefault();
+            setError("");
+            setNotice("");
+            setBusy(true);
+            const fd = new FormData(e.currentTarget);
+            const rawGrades = String(fd.get("grades") || "")
+              .split(",")
+              .map((v) => v.trim())
+              .filter(Boolean);
+            const rawSemesters = String(fd.get("semesters") || "")
+              .split(",")
+              .map((v) => Number(v.trim()))
+              .filter((n) => Number.isInteger(n) && n >= 1 && n <= 6);
+            try {
+              const res = await api("/admin/schools", {
+                method: "POST",
+                body: {
+                  name: String(fd.get("name") || "").trim(),
+                  publicRegistration: fd.get("publicRegistration") === "on",
+                  grades: rawGrades.length ? rawGrades : ["XI", "XII"],
+                  semesters: rawSemesters.length ? rawSemesters : [1, 2],
+                },
+              });
+              e.currentTarget.reset();
+              setNotice("Sekolah baru berhasil ditambahkan.");
+              await schools.reload();
+              if (res.school?.id) setSelectedId(res.school.id);
+            } catch (err) {
+              setError(err.message);
+            } finally {
+              setBusy(false);
+            }
+          }}
+        >
+          <h2>Tambah sekolah baru</h2>
+          <p>
+            Sekolah yang dibuka untuk pendaftaran akan langsung muncul di form
+            daftar siswa.
+          </p>
+          <Field
+            label="Nama sekolah"
+            name="name"
+            required
+            minLength={3}
+            maxLength={180}
+            placeholder="Contoh: SMA Negeri 2 Nusantara"
+          />
+          <Field
+            label="Daftar kelas awal (pisahkan dengan koma)"
+            name="grades"
+            defaultValue="XI, XII"
+            placeholder="Contoh: X, XI IPA 1, XI IPS 1, XII"
+          />
+          <Field
+            label="Daftar semester awal (angka 1–6, pisahkan koma)"
+            name="semesters"
+            defaultValue="1, 2"
+            placeholder="Contoh: 1, 2"
+          />
+          <label className="check-row">
+            <input type="checkbox" name="publicRegistration" defaultChecked />
+            <span>Buka pendaftaran siswa untuk sekolah ini</span>
+          </label>
+          <Button disabled={busy}>
+            <Plus size={18} aria-hidden="true" />
+            Tambah sekolah
+          </Button>
+        </form>
+
+        <section className="surface card stack">
+          <h2>Kelola kelas & semester</h2>
+          {schools.loading ? (
+            <Loading />
+          ) : !activeSchool ? (
+            <Empty title="Belum ada sekolah" />
+          ) : (
+            <>
+              <Select
+                label="Pilih sekolah"
+                value={activeSchool.id}
+                onChange={(e) => setSelectedId(e.target.value)}
+              >
+                {items.map((s) => (
+                  <option key={s.id} value={s.id}>
+                    {s.name}
+                    {s.isCurrentSchool ? " (Sekolah Anda)" : ""}
+                  </option>
+                ))}
+              </Select>
+              <label className="check-row">
+                <input
+                  type="checkbox"
+                  checked={Boolean(activeSchool.public_registration)}
+                  disabled={busy}
+                  onChange={(e) =>
+                    updateOptions(
+                      currentGrades,
+                      currentSemesters,
+                      e.target.checked,
+                    )
+                  }
+                />
+                <span>Pendaftaran siswa publik dibuka</span>
+              </label>
+
+              <div className="separated stack">
+                <h3>Pilihan Kelas</h3>
+                <div className="actions">
+                  {currentGrades.map((g) => (
+                    <span key={g} className="pill">
+                      {g}
+                      {currentGrades.length > 1 && (
+                        <button
+                          type="button"
+                          aria-label={`Hapus kelas ${g}`}
+                          disabled={busy}
+                          onClick={() =>
+                            updateOptions(
+                              currentGrades.filter((x) => x !== g),
+                              currentSemesters,
+                            )
+                          }
+                        >
+                          <X size={13} aria-hidden="true" />
+                        </button>
+                      )}
+                    </span>
+                  ))}
+                </div>
+                <div className="actions">
+                  <input
+                    aria-label="Tambah nama kelas"
+                    placeholder="Tambah kelas (mis. X, XI IPA 1)…"
+                    value={newGrade}
+                    maxLength={40}
+                    onChange={(e) => setNewGrade(e.target.value)}
+                    style={{ maxWidth: 260 }}
+                  />
+                  <Button
+                    type="button"
+                    variant="secondary small"
+                    disabled={busy || !newGrade.trim()}
+                    onClick={() => {
+                      const val = newGrade.trim();
+                      if (!val) return;
+                      if (currentGrades.includes(val)) {
+                        setError("Kelas tersebut sudah ada.");
+                        return;
+                      }
+                      setNewGrade("");
+                      updateOptions([...currentGrades, val], currentSemesters);
+                    }}
+                  >
+                    <Plus size={15} aria-hidden="true" />
+                    Tambah kelas
+                  </Button>
+                </div>
+              </div>
+
+              <div className="separated stack">
+                <h3>Pilihan Semester</h3>
+                <div className="actions">
+                  {currentSemesters.map((sem) => (
+                    <span key={sem} className="pill">
+                      Semester {sem}
+                      {currentSemesters.length > 1 && (
+                        <button
+                          type="button"
+                          aria-label={`Hapus semester ${sem}`}
+                          disabled={busy}
+                          onClick={() =>
+                            updateOptions(
+                              currentGrades,
+                              currentSemesters.filter((x) => x !== sem),
+                            )
+                          }
+                        >
+                          <X size={13} aria-hidden="true" />
+                        </button>
+                      )}
+                    </span>
+                  ))}
+                </div>
+                <div className="actions">
+                  <select
+                    aria-label="Pilih semester untuk ditambahkan"
+                    value={newSemester}
+                    onChange={(e) => setNewSemester(e.target.value)}
+                    style={{ maxWidth: 160 }}
+                  >
+                    {[1, 2, 3, 4, 5, 6].map((n) => (
+                      <option key={n} value={n}>
+                        Semester {n}
+                      </option>
+                    ))}
+                  </select>
+                  <Button
+                    type="button"
+                    variant="secondary small"
+                    disabled={busy}
+                    onClick={() => {
+                      const num = Number(newSemester);
+                      if (currentSemesters.includes(num)) {
+                        setError("Semester tersebut sudah ada.");
+                        return;
+                      }
+                      updateOptions(
+                        currentGrades,
+                        [...currentSemesters, num].sort((a, b) => a - b),
+                      );
+                    }}
+                  >
+                    <Plus size={15} aria-hidden="true" />
+                    Tambah semester
+                  </Button>
+                </div>
+              </div>
+            </>
+          )}
+        </section>
+      </div>
     </div>
   );
 }

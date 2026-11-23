@@ -263,5 +263,89 @@ export function approvalRoutes(pool) {
     });
     res.json({ ok: true });
   });
+  const academicOptionsSchema = z.strictObject({
+    grades: z
+      .array(z.string().trim().min(1).max(40))
+      .min(1, "Minimal 1 pilihan kelas.")
+      .max(30)
+      .transform((arr) => [...new Set(arr)]),
+    semesters: z
+      .array(z.coerce.number().int().min(1).max(6))
+      .min(1, "Minimal 1 pilihan semester.")
+      .max(6)
+      .transform((arr) => [...new Set(arr)].sort((a, b) => a - b)),
+    publicRegistration: z.boolean().optional(),
+  });
+  router.get("/schools", async (req, res) => {
+    const rows = (
+      await pool.query(
+        "SELECT id,name,public_registration,timezone,academic_options,created_at FROM schools ORDER BY name",
+      )
+    ).rows;
+    res.json({
+      items: rows.map((s) => ({
+        ...s,
+        isCurrentSchool: s.id === req.user.school_id,
+      })),
+    });
+  });
+  router.post("/schools", async (req, res) => {
+    const input = z
+      .strictObject({
+        name: z.string().trim().min(3).max(180),
+        publicRegistration: z.boolean().default(true),
+        grades: z
+          .array(z.string().trim().min(1).max(40))
+          .min(1)
+          .max(30)
+          .default(["XI", "XII"])
+          .transform((arr) => [...new Set(arr)]),
+        semesters: z
+          .array(z.coerce.number().int().min(1).max(6))
+          .min(1)
+          .max(6)
+          .default([1, 2])
+          .transform((arr) => [...new Set(arr)].sort((a, b) => a - b)),
+      })
+      .parse(req.body);
+    const school = await transaction(pool, async (db) => {
+      const record = await one(
+        db,
+        "INSERT INTO schools(name,public_registration,academic_options) VALUES($1,$2,$3) RETURNING id,name,public_registration,timezone,academic_options,created_at",
+        [
+          input.name,
+          input.publicRegistration,
+          JSON.stringify({ grades: input.grades, semesters: input.semesters }),
+        ],
+      );
+      await audit(db, req.user.id, "school_created", record.id);
+      return record;
+    });
+    res.status(201).json({ school });
+  });
+  router.patch("/schools/:id/academic-options", async (req, res) => {
+    const input = academicOptionsSchema.parse(req.body);
+    const school = await transaction(pool, async (db) => {
+      const current = requireRecord(
+        await one(
+          db,
+          "SELECT id,public_registration FROM schools WHERE id=$1 FOR UPDATE",
+          [req.params.id],
+        ),
+      );
+      const updated = await one(
+        db,
+        "UPDATE schools SET academic_options=$2,public_registration=$3 WHERE id=$1 RETURNING id,name,public_registration,timezone,academic_options,created_at",
+        [
+          current.id,
+          JSON.stringify({ grades: input.grades, semesters: input.semesters }),
+          input.publicRegistration ?? current.public_registration,
+        ],
+      );
+      await audit(db, req.user.id, "school_academic_options_updated", current.id);
+      return updated;
+    });
+    res.json({ school });
+  });
   return router;
 }

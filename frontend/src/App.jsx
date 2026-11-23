@@ -15,6 +15,9 @@ const ApprovalsPage = lazy(() => import("./pages/ApprovalsPage"));
 const RequestsPage = lazy(() =>
   import("./pages/BkPages").then((m) => ({ default: m.RequestsPage })),
 );
+const StudentsPage = lazy(() =>
+  import("./pages/BkPages").then((m) => ({ default: m.StudentsPage })),
+);
 const SharedHistoryPage = lazy(() =>
   import("./pages/BkPages").then((m) => ({ default: m.SharedHistoryPage })),
 );
@@ -101,6 +104,7 @@ export default function App() {
           </Route>
           <Route element={<Protected role="bk" />}>
             <Route path="/bk/permintaan" element={<RequestsPage />} />
+            <Route path="/bk/siswa" element={<StudentsPage />} />
             <Route
               path="/bk/riwayat-jawaban"
               element={<SharedHistoryPage />}

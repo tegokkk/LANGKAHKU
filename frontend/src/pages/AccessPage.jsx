@@ -43,8 +43,23 @@ export default function AccessPage() {
     [error, setError] = useState(""),
     [busy, setBusy] = useState(false),
     [code, setCode] = useState(""),
-    [notice, setNotice] = useState("");
+    [notice, setNotice] = useState(""),
+    [selectedSchoolId, setSelectedSchoolId] = useState("");
   const schools = useResource(tab === "register" ? "/public/schools" : null);
+  const activeRegSchool =
+    schools.data?.items.find((s) => s.id === selectedSchoolId) ||
+    schools.data?.items[0] ||
+    null;
+  const schoolGrades =
+    Array.isArray(activeRegSchool?.academic_options?.grades) &&
+    activeRegSchool.academic_options.grades.length
+      ? activeRegSchool.academic_options.grades
+      : ["XI", "XII"];
+  const schoolSemesters =
+    Array.isArray(activeRegSchool?.academic_options?.semesters) &&
+    activeRegSchool.academic_options.semesters.length
+      ? activeRegSchool.academic_options.semesters
+      : [1, 2];
   const staffAccess =
     new URLSearchParams(location.search).get("akses") === "staf";
 
@@ -344,7 +359,8 @@ export default function AccessPage() {
                       label="Sekolah"
                       name="schoolCode"
                       required
-                      defaultValue=""
+                      value={selectedSchoolId}
+                      onChange={(e) => setSelectedSchoolId(e.target.value)}
                     >
                       <option value="" disabled>
                         Pilih sekolahmu
@@ -357,12 +373,18 @@ export default function AccessPage() {
                     </Select>
                     <div className="form-grid">
                       <Select label="Kelas" name="grade">
-                        <option>XI</option>
-                        <option>XII</option>
+                        {schoolGrades.map((g) => (
+                          <option key={g} value={g}>
+                            {g}
+                          </option>
+                        ))}
                       </Select>
                       <Select label="Semester" name="semester">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
+                        {schoolSemesters.map((sem) => (
+                          <option key={sem} value={String(sem)}>
+                            {sem}
+                          </option>
+                        ))}
                       </Select>
                     </div>
                     <Select label="Kategori usia" name="ageBand">

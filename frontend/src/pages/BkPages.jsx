@@ -1037,3 +1037,215 @@ export function SharedHistoryPage() {
     </>
   );
 }
+
+export function StudentsPage() {
+  const [status, setStatus] = useState("all"),
+    [grade, setGrade] = useState("all"),
+    [q, setQ] = useState(""),
+    [page, setPage] = useState(1),
+    [selectedId, setSelectedId] = useState(null),
+    resource = useResource(
+      `/bk/students?status=${status}&grade=${encodeURIComponent(grade)}&q=${encodeURIComponent(q)}&page=${page}`,
+    );
+
+  const items = resource.data?.items || [];
+  const grades = resource.data?.grades || [];
+  const selected = items.find((item) => item.id === selectedId) || null;
+
+  return (
+    <>
+      <PageTitle eyebrow="RUANG GURU BK" title="Data siswa terdaftar">
+        Lihat daftar siswa di sekolah Anda beserta data yang didaftarkan saat
+        pembuatan akun.
+      </PageTitle>
+      <div className="surface card filter-row three-col">
+        <div className="search-field">
+          <span>Cari siswa</span>
+          <label className="search-input">
+            <Search size={18} aria-hidden="true" />
+            <input
+              aria-label="Cari nama panggilan atau username siswa"
+              placeholder="Cari nama panggilan atau username…"
+              value={q}
+              onChange={(e) => {
+                setQ(e.target.value);
+                setPage(1);
+                setSelectedId(null);
+              }}
+            />
+          </label>
+        </div>
+        <Select
+          label="Kelas"
+          value={grade}
+          onChange={(e) => {
+            setGrade(e.target.value);
+            setPage(1);
+            setSelectedId(null);
+          }}
+        >
+          <option value="all">Semua kelas</option>
+          {grades.map((g) => (
+            <option key={g} value={g}>
+              Kelas {g}
+            </option>
+          ))}
+        </Select>
+        <Select
+          label="Status akun"
+          value={status}
+          onChange={(e) => {
+            setStatus(e.target.value);
+            setPage(1);
+            setSelectedId(null);
+          }}
+        >
+          <option value="all">Semua status</option>
+          <option value="approved">Disetujui</option>
+          <option value="pending_approval">Menunggu persetujuan</option>
+          <option value="rejected">Ditolak</option>
+          <option value="suspended">Dinonaktifkan</option>
+        </Select>
+      </div>
+      <Banner type="error">{resource.error}</Banner>
+      <div className="queue-grid">
+        <section>
+          <div className="section-heading">
+            <h2>Daftar siswa</h2>
+            <span>{resource.data?.total || 0} siswa</span>
+          </div>
+          <div className="surface card table-card">
+            {resource.loading ? (
+              <Loading />
+            ) : !items.length ? (
+              <Empty title="Belum ada siswa terdaftar">
+                Siswa yang mendaftar di sekolah Anda akan tampil di sini.
+              </Empty>
+            ) : (
+              <div className="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Siswa</th>
+                      <th>Kelas</th>
+                      <th>Usia</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {items.map((item) => (
+                      <tr
+                        key={item.id}
+                        className={selectedId === item.id ? "selected" : ""}
+                      >
+                        <td data-label="Siswa">
+                          <button
+                            className="table-link"
+                            onClick={() => setSelectedId(item.id)}
+                          >
+                            <span className="avatar">
+                              {item.nickname.slice(0, 1).toUpperCase()}
+                            </span>
+                            <span>
+                              <strong>{item.nickname}</strong>
+                              <small>@{item.username}</small>
+                            </span>
+                          </button>
+                        </td>
+                        <td data-label="Kelas">
+                          {item.grade} · Sem {item.semester}
+                        </td>
+                        <td data-label="Usia">
+                          {item.age_band === "under18" ? "< 18 th" : "≥ 18 th"}
+                        </td>
+                        <td data-label="Status">
+                          <Badge status={item.status} />
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+            <div className="pagination">
+              <span>
+                Halaman {page} / {resource.data?.pages || 1}
+              </span>
+              <Button
+                variant="secondary small"
+                disabled={page === 1}
+                onClick={() => setPage((p) => p - 1)}
+              >
+                Sebelumnya
+              </Button>
+              <Button
+                variant="secondary small"
+                disabled={page >= (resource.data?.pages || 1)}
+                onClick={() => setPage((p) => p + 1)}
+              >
+                Berikutnya
+              </Button>
+            </div>
+          </div>
+          <Banner
+            type="success"
+            icon={<ShieldCheck size={20} aria-hidden="true" />}
+          >
+            Halaman ini hanya menampilkan data pendaftaran siswa di sekolah
+            Anda. Jurnal Langkahku dan refleksi pribadi tetap privat kecuali
+            dibagikan siswa lewat Sapa Guru BK.
+          </Banner>
+        </section>
+        <aside className="surface card detail-card">
+          {!selected ? (
+            <Empty title="Pilih siswa">
+              Klik salah satu siswa untuk melihat rincian data pendaftaran akun.
+            </Empty>
+          ) : (
+            <>
+              <span className="eyebrow">DATA PENDAFTARAN SISWA</span>
+              <div className="section-heading">
+                <h2>{selected.nickname}</h2>
+                <Badge status={selected.status} />
+              </div>
+              <dl className="detail-list">
+                <dt>Nama panggilan</dt>
+                <dd>{selected.nickname}</dd>
+                <dt>Username</dt>
+                <dd>@{selected.username}</dd>
+                <dt>Sekolah</dt>
+                <dd>{selected.school_name}</dd>
+                <dt>Kelas</dt>
+                <dd>{selected.grade}</dd>
+                <dt>Semester</dt>
+                <dd>Semester {selected.semester}</dd>
+                <dt>Kategori usia</dt>
+                <dd>
+                  {selected.age_band === "under18"
+                    ? "Di bawah 18 tahun"
+                    : "18 tahun atau lebih"}
+                </dd>
+                <dt>Tanggal mendaftar</dt>
+                <dd>{date(selected.created_at, true)}</dd>
+                <dt>Persetujuan siswa</dt>
+                <dd>
+                  {selected.student_agreed_at
+                    ? date(selected.student_agreed_at, true)
+                    : "Belum tercatat"}
+                </dd>
+                <dt>Status izin wali</dt>
+                <dd>
+                  {selected.guardian_status ? (
+                    <Badge status={selected.guardian_status} />
+                  ) : (
+                    "—"
+                  )}
+                </dd>
+              </dl>
+            </>
+          )}
+        </aside>
+      </div>
+    </>
+  );
+}
