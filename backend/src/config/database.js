@@ -1,8 +1,21 @@
 import pg from "pg";
 import { logger } from "./logger.js";
+function normalizeConnectionString(connectionString) {
+  try {
+    const url = new URL(connectionString);
+    if (["prefer", "require", "verify-ca"].includes(url.searchParams.get("sslmode"))) {
+      url.searchParams.set("sslmode", "verify-full");
+      return url.toString();
+    }
+  } catch {
+    // Keep original connection string if not a standard URL.
+  }
+  return connectionString;
+}
+
 export function createPool(connectionString) {
   const pool = new pg.Pool({
-    connectionString,
+    connectionString: normalizeConnectionString(connectionString),
     max: 15,
     connectionTimeoutMillis: 5000,
     idleTimeoutMillis: 30000,
