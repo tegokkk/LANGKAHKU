@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  --color-maroon: #6e2035;
+  --color-maroon-hover: #57172a;
+  --color-maroon-deep: #4f1225;
+  --color-ivory: #f7f3ed;
+  --color-blush: #f6e6ea;
+  --color-sage: #e7eee7;
+  --color-lavender: #eee9f6;
+  --color-peach: #f9e7db;
+  --color-butter: #fff0d5;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  /* Typography */
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --text-display: 3.375rem; /* 54px */
+  --text-h1: 2.375rem; /* 38px */
+  --text-h2: 1.375rem; /* 22px */
+  --text-h3: 1.125rem; /* 18px */
+  --text-lead: 1.125rem; /* 18px */
+  --text-body: 1rem; /* 16px */
+  --text-label: 0.875rem; /* 14px */
+  --text-meta: 0.8125rem; /* 13px */
+  --text-caption: 0.75rem; /* 12px */
+
+  /* Brand & Neutrals */
+  --maroon: #6e2035;
+  --maroon-hover: #57172a;
+  --maroon-deep: #4f1225;
+  --ivory: #f7f3ed;
+  --surface: #ffffff;
+  --surface-warm: #fffdf9;
+  --surface-subtle: #f3eee8;
+  --text-primary: #241a20;
+  --text-secondary: #6d6268;
+  --muted: #6d6268;
+  --line: #e7dee2;
+  --control: #8c7d85;
+  --control-hover: #6d6268;
+
+  /* Domain Pastels */
+  --blush: #f6e6ea;
+  --blush-border: #e5cbd2;
+  --sage: #e7eee7;
+  --sage-border: #cad8ca;
+  --lavender: #eee9f6;
+  --lavender-border: #d7cde6;
+  --peach: #f9e7db;
+  --peach-border: #e9cebc;
+  --butter: #fff0d5;
+  --butter-border: #ead2a7;
+
+  /* Semantic Status */
+  --success-text: #315d46;
+  --success-bg: #e7eee7;
+  --success-border: #c5d6c5;
+  --warning-text: #7a4c15;
+  --warning-bg: #fff0d5;
+  --warning-border: #e7cda0;
+  --danger-text: #9f243c;
+  --danger-hover: #831b30;
+  --danger-bg: #fbe7ed;
+  --danger-border: #e5b7c2;
+  --info-text: #463a59;
+  --info-bg: #eee9f6;
+  --info-border: #d7cde6;
+
+  /* Spacing Scale (4/8px system) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Radius */
+  --radius-sm: 12px;
+  --radius-control: 18px;
+  --radius-md: 22px;
+  --radius-card: 28px;
+  --radius-hero: 36px;
+  --radius-pill: 999px;
+
+  /* Layout */
+  --container-max: 1200px;
+  --staff-container-max: 1360px;
+  --sidebar-width: 256px;
+
+  /* Elevation & Motion */
+  --surface-highlight: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.48),
+    rgba(255, 255, 255, 0.12) 45%,
+    rgba(110, 32, 53, 0.025)
+  );
+  --shadow-sm:
+    0 2px 5px rgba(36, 26, 32, 0.025), 0 10px 26px rgba(36, 26, 32, 0.045),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  --shadow-card:
+    0 2px 5px rgba(36, 26, 32, 0.04), 0 9px 22px rgba(36, 26, 32, 0.055),
+    inset 0 2px 1px rgba(255, 255, 255, 0.85),
+    inset 0 -2px 6px rgba(36, 26, 32, 0.035),
+    inset 1px 0 4px rgba(255, 255, 255, 0.35);
+  --shadow-hover:
+    0 4px 9px rgba(36, 26, 32, 0.035), 0 16px 34px rgba(36, 26, 32, 0.075),
+    inset 0 1px 1px rgba(255, 255, 255, 0.95);
+  --shadow-control:
+    0 2px 4px rgba(36, 26, 32, 0.06), 0 6px 14px rgba(36, 26, 32, 0.07),
+    inset 0 1px 1px rgba(255, 255, 255, 0.24),
+    inset 0 -1px 2px rgba(36, 26, 32, 0.12);
+  --shadow-panel: -8px 0 36px rgba(36, 26, 32, 0.12);
+  --motion-duration-fast: 160ms;
+  --motion-duration-view: 190ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-distance: 6px;
+  --transition: var(--motion-duration-fast) var(--motion-ease);
+
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-primary);
+  background: var(--ivory);
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

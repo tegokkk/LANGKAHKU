@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lembar Kerja LANGKAHKU</title>
+    <style>
+      body {
+        font:
+          16px/1.7 system-ui,
+          sans-serif;
+        color: #241a20;
+        margin: 0;
+        background: #f7f3ed;
+      }
+      main {
+        max-width: 800px;
+        margin: 35px auto;
+        background: white;
+        padding: 45px;
+      }
+      h1 {
+        color: #6e2035;
+      }
+      h2 {
+        margin-top: 35px;
+      }
+      p {
+        color: #62545e;
+      }
+      section {
+        break-after: page;
+      }
+      .answer {
+        min-height: 95px;
+        border-bottom: 1px solid #8c7d85;
+        margin: 20px 0;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #8c7d85;
+        padding: 14px;
+        min-width: 80px;
+        height: 45px;
+      }
+      button {
+        border: 0;
+        background: #6e2035;
+        color: white;
+        padding: 13px 20px;
+        border-radius: 10px;
+        font: inherit;
+        cursor: pointer;
+      }
+      .tools {
+        padding: 20px;
+        background: #eee9f6;
+      }
+      .semester {
+        min-height: 150px;
+        border: 1px solid #8c7d85;
+        padding: 15px;
+        margin: 18px 0;
+      }
+      @page {
+        size: A4;
+        margin: 18mm;
+      }
+      @media print {
+        section>h1:first-child {margin-top:0;}
+        .answer {min-height:80px!important;margin:14px 0;}
+        section:nth-of-type(2) .answer:last-of-type {min-height:180px!important;}
+        th,td {height:36px;padding:10px;font-size:10pt;line-height:1.35;}
+        body {
+          font-size: 11pt;
+          background: white;
+        }
+        main {
+          margin: 0;
+          padding: 0;
+          max-width: none;
+        }
+        .tools {
+          display: none;
+        }
+        h1 {
+          font-size: 22pt;
+        }
+        h2 {
+          font-size: 16pt;
+          margin-top:24px;
+        }
+        section:last-child {
+          break-after: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="tools">
+        <p>
+          Isi di kertas atau gunakan Cetak → Simpan sebagai PDF. Tidak ada
+          jawaban yang dikirim ke server dari lembar ini.
+        </p>
+        <button onclick="window.print()">Cetak / simpan sebagai PDF</button>
+      </div>
+      <section>
+        <h1>Kenali Diriku</h1>
+        <p>
+          Ini refleksi, bukan tes. Tidak ada jawaban benar atau salah. Semua
+          pertanyaan boleh dilewati.
+        </p>
+        <h2>1. Kegiatan yang kusukai</h2>
+        <div class="answer"></div>
+        <h2>2. Pelajaran yang kunikmati</h2>
+        <div class="answer"></div>
+        <h2>3. Kekuatan dan pengalaman kecilku</h2>
+        <div class="answer"></div>
+      </section>
+      <section>
+        <h1>Kenali Diriku · lanjut</h1>
+        <h2>4. Hal yang penting dalam pekerjaan kelak</h2>
+        <div class="answer"></div>
+        <h2>5. Dukungan yang ingin kucari</h2>
+        <div class="answer"></div>
+        <h2>6. Ringkasan tentang diriku, menurutku</h2>
+        <div class="answer" style="min-height: 210px"></div>
+        <p>
+          Ringkasan hanya berasal dari jawabanmu, tanpa skor kecocokan atau tipe
+          pasti.
+        </p>
+      </section>
+      <section>
+        <h1>Panduan Jelajah Jalur</h1>
+        <p>
+          Pilihan yang bisa dipelajari: kuliah seleksi nasional; seleksi
+          mandiri/swasta; perguruan tinggi keagamaan; kerja/pelatihan; kuliah
+          sambil kerja; usaha. Tidak ada satu jalur yang lebih tinggi nilainya.
+        </p>
+        <h2>Jalur yang ingin kupelajari</h2>
+        <div class="answer"></div>
+        <h2>Apa syarat, waktu, biaya, dan dukungannya?</h2>
+        <div class="answer" style="min-height: 180px"></div>
+        <h2>Sumber resmi dan tanggal kuperiksa</h2>
+        <div class="answer"></div>
+        <h2>Pertanyaan untuk guru BK</h2>
+        <div class="answer"></div>
+        <p>
+          Periksa ketentuan tahun berjalan langsung pada sumber resmi. Jangan
+          menganggap jadwal atau biaya lama masih berlaku.
+        </p>
+      </section>
+      <section>
+        <h1>Timbang Pilihan</h1>
+        <p>
+          Hasil ini bahan diskusi, bukan keputusan otomatis. Isi 1–5 atau “belum
+          tahu”. 1 kurang mendukung, 5 sangat mendukung; biaya 5 berarti lebih
+          terjangkau. Jangan dijumlahkan untuk menentukan pemenang.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Kriteria</th>
+              <th>Pilihan A</th>
+              <th>Pilihan B</th>
+              <th>Pilihan C (opsional)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Nama opsi</th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Minat</th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Kemampuan</th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Biaya</th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Dukungan</th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Peluang</th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Alasan pribadi</th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Hal yang ingin kutanyakan sebelum memilih</h2>
+        <div class="answer" style="min-height: 150px"></div>
+      </section>
+      <section>
+        <h1>Rencana Langkahku</h1>
+        <p>Tujuan utama: ___________________________________________________</p>
+        <p>
+          Rencana cadangan: ________________________________________________
+        </p>
+        <p>
+          Mulai dari langkah kecil. Kamu boleh meninjau kembali tujuan dan
+          waktunya.
+        </p>
+        <div class="semester">
+          <strong>XI-1</strong>
+          <p>☐ ____________________________ Tenggat (opsional): __________</p>
+          <p>☐ ____________________________ Tenggat (opsional): __________</p>
+          <p>☐ ____________________________ Tenggat (opsional): __________</p>
+        </div>
+        <div class="semester">
+          <strong>XI-2</strong>
+          <p>☐ ____________________________ Tenggat (opsional): __________</p>
+          <p>☐ ____________________________ Tenggat (opsional): __________</p>
+          <p>☐ ____________________________ Tenggat (opsional): __________</p>
+        </div>
+      </section>
+      <section>
+        <h1>Rencana Langkahku · lanjut</h1>
+        <div class="semester">
+          <strong>XII-1</strong>
+          <p>☐ ____________________________ Tenggat (opsional): __________</p>
+          <p>☐ ____________________________ Tenggat (opsional): __________</p>
+          <p>☐ ____________________________ Tenggat (opsional): __________</p>
+        </div>
+        <div class="semester">
+          <strong>XII-2</strong>
+          <p>☐ ____________________________ Tenggat (opsional): __________</p>
+          <p>☐ ____________________________ Tenggat (opsional): __________</p>
+          <p>☐ ____________________________ Tenggat (opsional): __________</p>
+        </div>
+        <p>Catatan dukungan yang ingin kucari:</p>
+        <div class="answer"></div>
+      </section>
+      <section>
+        <h1>Ngobrol dengan Orang Tua</h1>
+        <p>
+          Lembar untuk berdiskusi. Dengarkan satu sama lain. Tidak perlu
+          mengungkap informasi sensitif yang belum nyaman dibicarakan.
+        </p>
+        <h2>Apa yang membuatku penasaran?</h2>
+        <div class="answer"></div>
+        <h2>Pilihan apa yang ingin kupelajari, dan mengapa?</h2>
+        <div class="answer"></div>
+        <h2>Apa kekhawatiran kami dan dukungan yang tersedia?</h2>
+        <div class="answer"></div>
+        <h2>Satu langkah kecil yang akan kucoba</h2>
+        <div class="answer"></div>
+        <p>
+          Keputusan dapat ditinjau kembali. Guru BK bisa menjadi teman diskusi
+          berikutnya.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

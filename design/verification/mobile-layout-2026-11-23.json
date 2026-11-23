@@ -1,0 +1,170 @@
+[
+  {
+    "route": "/",
+    "client": 301,
+    "overflow": false,
+    "page": 301,
+    "viewport": 320
+  },
+  {
+    "route": "/peta-jalur",
+    "client": 301,
+    "overflow": false,
+    "page": 301,
+    "viewport": 320
+  },
+  {
+    "route": "/cerita-langkah",
+    "client": 301,
+    "overflow": false,
+    "page": 301,
+    "viewport": 320
+  },
+  {
+    "route": "/masuk",
+    "client": 301,
+    "overflow": false,
+    "page": 301,
+    "viewport": 320
+  },
+  {
+    "route": "/masuk?akses=staf",
+    "client": 301,
+    "overflow": false,
+    "page": 301,
+    "viewport": 320
+  },
+  {
+    "route": "/daftar",
+    "client": 301,
+    "overflow": false,
+    "page": 301,
+    "viewport": 320
+  },
+  {
+    "route": "/tentang",
+    "client": 301,
+    "overflow": false,
+    "page": 301,
+    "viewport": 320
+  },
+  {
+    "route": "/cara-menggunakan",
+    "client": 301,
+    "overflow": false,
+    "page": 301,
+    "viewport": 320
+  },
+  {
+    "route": "/panduan-orang-tua",
+    "client": 301,
+    "overflow": false,
+    "page": 301,
+    "viewport": 320
+  },
+  {
+    "route": "/unduhan",
+    "client": 301,
+    "overflow": false,
+    "page": 301,
+    "viewport": 320
+  },
+  {
+    "route": "/faq",
+    "client": 301,
+    "overflow": false,
+    "page": 301,
+    "viewport": 320
+  },
+  {
+    "route": "/privasi",
+    "client": 301,
+    "overflow": false,
+    "page": 301,
+    "viewport": 320
+  },
+  {
+    "route": "/",
+    "client": 371,
+    "overflow": false,
+    "page": 371,
+    "viewport": 390
+  },
+  {
+    "route": "/peta-jalur",
+    "client": 371,
+    "overflow": false,
+    "page": 371,
+    "viewport": 390
+  },
+  {
+    "route": "/cerita-langkah",
+    "client": 371,
+    "overflow": false,
+    "page": 371,
+    "viewport": 390
+  },
+  {
+    "route": "/masuk",
+    "client": 371,
+    "overflow": false,
+    "page": 371,
+    "viewport": 390
+  },
+  {
+    "route": "/masuk?akses=staf",
+    "client": 371,
+    "overflow": false,
+    "page": 371,
+    "viewport": 390
+  },
+  {
+    "route": "/daftar",
+    "client": 371,
+    "overflow": false,
+    "page": 371,
+    "viewport": 390
+  },
+  {
+    "route": "/tentang",
+    "client": 371,
+    "overflow": false,
+    "page": 371,
+    "viewport": 390
+  },
+  {
+    "route": "/cara-menggunakan",
+    "client": 371,
+    "overflow": false,
+    "page": 371,
+    "viewport": 390
+  },
+  {
+    "route": "/panduan-orang-tua",
+    "client": 371,
+    "overflow": false,
+    "page": 371,
+    "viewport": 390
+  },
+  {
+    "route": "/unduhan",
+    "client": 371,
+    "overflow": false,
+    "page": 371,
+    "viewport": 390
+  },
+  {
+    "route": "/faq",
+    "client": 371,
+    "overflow": false,
+    "page": 371,
+    "viewport": 390
+  },
+  {
+    "route": "/privasi",
+    "client": 371,
+    "overflow": false,
+    "page": 371,
+    "viewport": 390
+  }
+]

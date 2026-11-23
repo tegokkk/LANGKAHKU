@@ -1,0 +1,352 @@
+[
+  {
+    "target": 1280,
+    "path": "/beranda",
+    "scrollWidth": 1265,
+    "title": "Halo, Siswa Uji UI.",
+    "width": 1280
+  },
+  {
+    "target": 1280,
+    "path": "/kenali-diriku",
+    "scrollWidth": 1265,
+    "title": "Mengenal diri, selangkah lagi.",
+    "width": 1280
+  },
+  {
+    "target": 1280,
+    "path": "/peta-jalur",
+    "scrollWidth": 1265,
+    "title": "Banyak jalan. Temukan ceritamu.",
+    "width": 1280
+  },
+  {
+    "target": 1280,
+    "path": "/rencana",
+    "scrollWidth": 1265,
+    "title": "Langkah kecil, tujuan yang berarti.",
+    "width": 1280
+  },
+  {
+    "target": 1280,
+    "path": "/sapa-bk",
+    "scrollWidth": 1265,
+    "title": "Tidak harus dipikirkan sendiri.",
+    "width": 1280
+  },
+  {
+    "target": 1440,
+    "path": "/beranda",
+    "scrollWidth": 1425,
+    "title": "Halo, Siswa Uji UI.",
+    "width": 1440
+  },
+  {
+    "target": 1440,
+    "path": "/kenali-diriku",
+    "scrollWidth": 1425,
+    "title": "Mengenal diri, selangkah lagi.",
+    "width": 1440
+  },
+  {
+    "target": 1440,
+    "path": "/peta-jalur",
+    "scrollWidth": 1425,
+    "title": "Banyak jalan. Temukan ceritamu.",
+    "width": 1440
+  },
+  {
+    "target": 1440,
+    "path": "/rencana",
+    "scrollWidth": 1425,
+    "title": "Langkah kecil, tujuan yang berarti.",
+    "width": 1440
+  },
+  {
+    "target": 1440,
+    "path": "/sapa-bk",
+    "scrollWidth": 1425,
+    "title": "Tidak harus dipikirkan sendiri.",
+    "width": 1440
+  },
+  {
+    "target": 1920,
+    "path": "/beranda",
+    "scrollWidth": 1905,
+    "title": "Halo, Siswa Uji UI.",
+    "width": 1920
+  },
+  {
+    "target": 1920,
+    "path": "/kenali-diriku",
+    "scrollWidth": 1905,
+    "title": "Mengenal diri, selangkah lagi.",
+    "width": 1920
+  },
+  {
+    "target": 1920,
+    "path": "/peta-jalur",
+    "scrollWidth": 1905,
+    "title": "Banyak jalan. Temukan ceritamu.",
+    "width": 1920
+  },
+  {
+    "target": 1920,
+    "path": "/rencana",
+    "scrollWidth": 1905,
+    "title": "Langkah kecil, tujuan yang berarti.",
+    "width": 1920
+  },
+  {
+    "target": 1920,
+    "path": "/sapa-bk",
+    "scrollWidth": 1905,
+    "title": "Tidak harus dipikirkan sendiri.",
+    "width": 1920
+  },
+  {
+    "target": 390,
+    "path": "/beranda",
+    "scrollWidth": 375,
+    "title": "Halo, Siswa Uji UI.",
+    "width": 390
+  },
+  {
+    "target": 390,
+    "path": "/kenali-diriku",
+    "scrollWidth": 375,
+    "title": "Mengenal diri, selangkah lagi.",
+    "width": 390
+  },
+  {
+    "target": 390,
+    "path": "/peta-jalur",
+    "scrollWidth": 375,
+    "title": "Banyak jalan. Temukan ceritamu.",
+    "width": 390
+  },
+  {
+    "target": 390,
+    "path": "/rencana",
+    "scrollWidth": 375,
+    "title": "Langkah kecil, tujuan yang berarti.",
+    "width": 390
+  },
+  {
+    "target": 390,
+    "path": "/sapa-bk",
+    "scrollWidth": 375,
+    "title": "Tidak harus dipikirkan sendiri.",
+    "width": 390
+  },
+  {
+    "target": 360,
+    "path": "/beranda",
+    "scrollWidth": 345,
+    "title": "Halo, Siswa Uji UI.",
+    "width": 360
+  },
+  {
+    "target": 360,
+    "path": "/kenali-diriku",
+    "scrollWidth": 345,
+    "title": "Mengenal diri, selangkah lagi.",
+    "width": 360
+  },
+  {
+    "target": 360,
+    "path": "/peta-jalur",
+    "scrollWidth": 345,
+    "title": "Banyak jalan. Temukan ceritamu.",
+    "width": 360
+  },
+  {
+    "target": 360,
+    "path": "/rencana",
+    "scrollWidth": 345,
+    "title": "Langkah kecil, tujuan yang berarti.",
+    "width": 360
+  },
+  {
+    "target": 360,
+    "path": "/sapa-bk",
+    "scrollWidth": 345,
+    "title": "Tidak harus dipikirkan sendiri.",
+    "width": 360
+  },
+  {
+    "target": 1280,
+    "path": "/bk/permintaan",
+    "scrollWidth": 1280,
+    "title": "Ruang untuk mendengarkan.",
+    "width": 1280
+  },
+  {
+    "target": 1280,
+    "path": "/bk/agregat",
+    "scrollWidth": 1265,
+    "title": "Melihat kebutuhan bersama.",
+    "width": 1280
+  },
+  {
+    "target": 1280,
+    "path": "/bk/kelola",
+    "scrollWidth": 1265,
+    "title": "Informasi yang layak dipercaya.",
+    "width": 1280
+  },
+  {
+    "target": 1440,
+    "path": "/bk/permintaan",
+    "scrollWidth": 1440,
+    "title": "Ruang untuk mendengarkan.",
+    "width": 1440
+  },
+  {
+    "target": 1440,
+    "path": "/bk/agregat",
+    "scrollWidth": 1425,
+    "title": "Melihat kebutuhan bersama.",
+    "width": 1440
+  },
+  {
+    "target": 1440,
+    "path": "/bk/kelola",
+    "scrollWidth": 1425,
+    "title": "Informasi yang layak dipercaya.",
+    "width": 1440
+  },
+  {
+    "target": 1920,
+    "path": "/bk/permintaan",
+    "scrollWidth": 1920,
+    "title": "Ruang untuk mendengarkan.",
+    "width": 1920
+  },
+  {
+    "target": 1920,
+    "path": "/bk/agregat",
+    "scrollWidth": 1905,
+    "title": "Melihat kebutuhan bersama.",
+    "width": 1920
+  },
+  {
+    "target": 1920,
+    "path": "/bk/kelola",
+    "scrollWidth": 1905,
+    "title": "Informasi yang layak dipercaya.",
+    "width": 1920
+  },
+  {
+    "target": 390,
+    "path": "/bk/agregat",
+    "scrollWidth": 375,
+    "title": "Melihat kebutuhan bersama.",
+    "width": 390
+  },
+  {
+    "target": 390,
+    "path": "/bk/kelola",
+    "scrollWidth": 375,
+    "title": "Informasi yang layak dipercaya.",
+    "width": 390
+  },
+  {
+    "target": 360,
+    "path": "/bk/agregat",
+    "scrollWidth": 345,
+    "title": "Melihat kebutuhan bersama.",
+    "width": 360
+  },
+  {
+    "target": 360,
+    "path": "/bk/kelola",
+    "scrollWidth": 345,
+    "title": "Informasi yang layak dipercaya.",
+    "width": 360
+  },
+  {
+    "target": 390,
+    "path": "/bk/permintaan",
+    "scrollWidth": 375,
+    "title": "Ruang untuk mendengarkan.",
+    "width": 390
+  },
+  {
+    "target": 360,
+    "path": "/bk/permintaan",
+    "scrollWidth": 345,
+    "title": "Ruang untuk mendengarkan.",
+    "width": 360
+  },
+  {
+    "target": 1280,
+    "path": "/superadmin/pendaftaran",
+    "scrollWidth": 1280,
+    "title": "Pendaftaran siswa",
+    "width": 1280
+  },
+  {
+    "target": 1440,
+    "path": "/superadmin/pendaftaran",
+    "scrollWidth": 1440,
+    "title": "Pendaftaran siswa",
+    "width": 1440
+  },
+  {
+    "target": 1920,
+    "path": "/superadmin/pendaftaran",
+    "scrollWidth": 1920,
+    "title": "Pendaftaran siswa",
+    "width": 1920
+  },
+  {
+    "target": 390,
+    "path": "/superadmin/pendaftaran",
+    "scrollWidth": 375,
+    "title": "Pendaftaran siswa",
+    "width": 390
+  },
+  {
+    "target": 360,
+    "path": "/superadmin/pendaftaran",
+    "scrollWidth": 347,
+    "title": "Pendaftaran siswa",
+    "width": 360
+  },
+  {
+    "target": 1280,
+    "path": "/daftar",
+    "scrollWidth": 1265,
+    "title": "Masa depanmu,dimulai darisatu langkah.",
+    "width": 1280
+  },
+  {
+    "target": 1440,
+    "path": "/daftar",
+    "scrollWidth": 1425,
+    "title": "Masa depanmu,dimulai darisatu langkah.",
+    "width": 1440
+  },
+  {
+    "target": 1920,
+    "path": "/daftar",
+    "scrollWidth": 1905,
+    "title": "Masa depanmu,dimulai darisatu langkah.",
+    "width": 1920
+  },
+  {
+    "target": 390,
+    "path": "/daftar",
+    "scrollWidth": 375,
+    "title": "Masa depanmu,dimulai darisatu langkah.",
+    "width": 390
+  },
+  {
+    "target": 360,
+    "path": "/daftar",
+    "scrollWidth": 345,
+    "title": "Masa depanmu,dimulai darisatu langkah.",
+    "width": 360
+  }
+]

@@ -1,0 +1,17 @@
+**/node_modules
+**/dist
+**/.env
+**/.env.*
+**/.git
+.local
+tmp
+output
+design
+stitch_langkahku_student_career_portal
+*.pdf
+**/coverage
+**/*.log
+deploy/.env
+**/bootstrap-superadmin.json
+backend/tests
+backend/seeds

@@ -1,0 +1,562 @@
+[
+  {
+    "targetRoute": "/",
+    "route": "/",
+    "width": 1280,
+    "scrollWidth": 1265,
+    "overflow": false,
+    "h1Size": 54,
+    "pSize": 16,
+    "smallBtns": 1
+  },
+  {
+    "targetRoute": "/",
+    "route": "/",
+    "width": 1440,
+    "scrollWidth": 1425,
+    "overflow": false,
+    "h1Size": 54,
+    "pSize": 16,
+    "smallBtns": 1
+  },
+  {
+    "targetRoute": "/",
+    "route": "/",
+    "width": 1920,
+    "scrollWidth": 1905,
+    "overflow": false,
+    "h1Size": 54,
+    "pSize": 16,
+    "smallBtns": 1
+  },
+  {
+    "targetRoute": "/",
+    "route": "/",
+    "width": 390,
+    "scrollWidth": 390,
+    "overflow": false,
+    "h1Size": 36,
+    "pSize": 16,
+    "smallBtns": 1
+  },
+  {
+    "targetRoute": "/",
+    "route": "/",
+    "width": 360,
+    "scrollWidth": 360,
+    "overflow": false,
+    "h1Size": 36,
+    "pSize": 16,
+    "smallBtns": 1
+  },
+  {
+    "targetRoute": "/peta-jalur",
+    "route": "/peta-jalur",
+    "width": 1280,
+    "scrollWidth": 1265,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/peta-jalur",
+    "route": "/peta-jalur",
+    "width": 1440,
+    "scrollWidth": 1425,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/peta-jalur",
+    "route": "/peta-jalur",
+    "width": 1920,
+    "scrollWidth": 1905,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/peta-jalur",
+    "route": "/peta-jalur",
+    "width": 390,
+    "scrollWidth": 390,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/peta-jalur",
+    "route": "/peta-jalur",
+    "width": 360,
+    "scrollWidth": 360,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/beranda",
+    "route": "/beranda",
+    "width": 1280,
+    "scrollWidth": 1265,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/beranda",
+    "route": "/beranda",
+    "width": 1440,
+    "scrollWidth": 1425,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/beranda",
+    "route": "/beranda",
+    "width": 1920,
+    "scrollWidth": 1905,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/beranda",
+    "route": "/beranda",
+    "width": 390,
+    "scrollWidth": 390,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/beranda",
+    "route": "/beranda",
+    "width": 360,
+    "scrollWidth": 360,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/kenali-diriku",
+    "route": "/kenali-diriku",
+    "width": 1280,
+    "scrollWidth": 1265,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 5
+  },
+  {
+    "targetRoute": "/kenali-diriku",
+    "route": "/kenali-diriku",
+    "width": 1440,
+    "scrollWidth": 1425,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 5
+  },
+  {
+    "targetRoute": "/kenali-diriku",
+    "route": "/kenali-diriku",
+    "width": 1920,
+    "scrollWidth": 1905,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 5
+  },
+  {
+    "targetRoute": "/kenali-diriku",
+    "route": "/kenali-diriku",
+    "width": 390,
+    "scrollWidth": 390,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 5
+  },
+  {
+    "targetRoute": "/kenali-diriku",
+    "route": "/kenali-diriku",
+    "width": 360,
+    "scrollWidth": 360,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 5
+  },
+  {
+    "targetRoute": "/rencana",
+    "route": "/rencana",
+    "width": 1280,
+    "scrollWidth": 1265,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/rencana",
+    "route": "/rencana",
+    "width": 1440,
+    "scrollWidth": 1425,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/rencana",
+    "route": "/rencana",
+    "width": 1920,
+    "scrollWidth": 1905,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/rencana",
+    "route": "/rencana",
+    "width": 390,
+    "scrollWidth": 390,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/rencana",
+    "route": "/rencana",
+    "width": 360,
+    "scrollWidth": 360,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/timbang-pilihan",
+    "route": "/timbang-pilihan",
+    "width": 1280,
+    "scrollWidth": 1265,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/timbang-pilihan",
+    "route": "/timbang-pilihan",
+    "width": 1440,
+    "scrollWidth": 1425,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/timbang-pilihan",
+    "route": "/timbang-pilihan",
+    "width": 1920,
+    "scrollWidth": 1905,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/timbang-pilihan",
+    "route": "/timbang-pilihan",
+    "width": 390,
+    "scrollWidth": 390,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/timbang-pilihan",
+    "route": "/timbang-pilihan",
+    "width": 360,
+    "scrollWidth": 360,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/sapa-bk",
+    "route": "/sapa-bk",
+    "width": 1280,
+    "scrollWidth": 1265,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 1
+  },
+  {
+    "targetRoute": "/sapa-bk",
+    "route": "/sapa-bk",
+    "width": 1440,
+    "scrollWidth": 1425,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 1
+  },
+  {
+    "targetRoute": "/sapa-bk",
+    "route": "/sapa-bk",
+    "width": 1920,
+    "scrollWidth": 1905,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 1
+  },
+  {
+    "targetRoute": "/sapa-bk",
+    "route": "/sapa-bk",
+    "width": 390,
+    "scrollWidth": 390,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 1
+  },
+  {
+    "targetRoute": "/sapa-bk",
+    "route": "/sapa-bk",
+    "width": 360,
+    "scrollWidth": 360,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 1
+  },
+  {
+    "targetRoute": "/bk/permintaan",
+    "route": "/bk/permintaan",
+    "width": 1280,
+    "scrollWidth": 1265,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/bk/permintaan",
+    "route": "/bk/permintaan",
+    "width": 1440,
+    "scrollWidth": 1425,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/bk/permintaan",
+    "route": "/bk/permintaan",
+    "width": 1920,
+    "scrollWidth": 1905,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/bk/permintaan",
+    "route": "/bk/permintaan",
+    "width": 390,
+    "scrollWidth": 390,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/bk/permintaan",
+    "route": "/bk/permintaan",
+    "width": 360,
+    "scrollWidth": 360,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/bk/agregat",
+    "route": "/bk/agregat",
+    "width": 1280,
+    "scrollWidth": 1265,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/bk/agregat",
+    "route": "/bk/agregat",
+    "width": 1440,
+    "scrollWidth": 1425,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/bk/agregat",
+    "route": "/bk/agregat",
+    "width": 1920,
+    "scrollWidth": 1905,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/bk/agregat",
+    "route": "/bk/agregat",
+    "width": 390,
+    "scrollWidth": 390,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/bk/agregat",
+    "route": "/bk/agregat",
+    "width": 360,
+    "scrollWidth": 360,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/bk/kelola",
+    "route": "/bk/kelola",
+    "width": 1280,
+    "scrollWidth": 1265,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/bk/kelola",
+    "route": "/bk/kelola",
+    "width": 1440,
+    "scrollWidth": 1425,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/bk/kelola",
+    "route": "/bk/kelola",
+    "width": 1920,
+    "scrollWidth": 1905,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/bk/kelola",
+    "route": "/bk/kelola",
+    "width": 390,
+    "scrollWidth": 390,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/bk/kelola",
+    "route": "/bk/kelola",
+    "width": 360,
+    "scrollWidth": 360,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/superadmin/pendaftaran",
+    "route": "/superadmin/pendaftaran",
+    "width": 1280,
+    "scrollWidth": 1265,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/superadmin/pendaftaran",
+    "route": "/superadmin/pendaftaran",
+    "width": 1440,
+    "scrollWidth": 1425,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/superadmin/pendaftaran",
+    "route": "/superadmin/pendaftaran",
+    "width": 1920,
+    "scrollWidth": 1905,
+    "overflow": false,
+    "h1Size": 38,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/superadmin/pendaftaran",
+    "route": "/superadmin/pendaftaran",
+    "width": 390,
+    "scrollWidth": 390,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/superadmin/pendaftaran",
+    "route": "/superadmin/pendaftaran",
+    "width": 360,
+    "scrollWidth": 360,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  },
+  {
+    "targetRoute": "/superadmin/pendaftaran (200% zoom ~720px)",
+    "route": "/superadmin/pendaftaran",
+    "width": 720,
+    "scrollWidth": 705,
+    "overflow": false,
+    "h1Size": 28,
+    "pSize": 16,
+    "smallBtns": 0
+  }
+]

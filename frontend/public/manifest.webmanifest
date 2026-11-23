@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "LANGKAHKU — Perencanaan Karier Siswa",
+  "short_name": "LANGKAHKU",
+  "description": "Langkah kecil, arah yang lebih jelas.",
+  "lang": "id",
+  "start_url": "/peta-jalur",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F7F3ED",
+  "theme_color": "#6E2035",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

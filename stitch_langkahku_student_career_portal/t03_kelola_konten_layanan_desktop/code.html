@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#fdf9f3", "primary-fixed-dim": "#ffb2bf", "surface": "#fdf9f3", "primary-fixed": "#ffd9de", "tertiary-fixed": "#ffd9df", "surface-card": "#FFFFFF", "on-surface-variant": "#544245", "tertiary-fixed-dim": "#ffb1c1", "on-background": "#1c1c18", "primary-container": "#6e2035", "on-secondary-fixed-variant": "#753042", "surface-container-highest": "#e6e2dc", "surface-container-low": "#f7f3ed", "surface-container-lowest": "#ffffff", "on-primary-container": "#f1889d", "on-secondary-fixed": "#3d0418", "on-primary-fixed-variant": "#7b2a3f", "text-primary": "#241A20", "domain-peta-jalur": "#E7EEE7", "domain-timbang-pilihan": "#EEE9F6", "domain-rencana-langkahku": "#F9E7DB", "on-surface": "#1c1c18", "secondary": "#914759", "error-container": "#ffdad6", "inverse-surface": "#31302d", "border-decorative": "#E7DEE2", "on-secondary": "#ffffff", "feedback-error-bg": "#FBE7ED", "on-tertiary-container": "#e98da1", "inverse-primary": "#ffb2bf", "domain-kenali-diriku": "#F6E6EA", "on-error": "#ffffff", "secondary-container": "#fea1b5", "tertiary-container": "#692538", "background": "#fdf9f3", "on-primary": "#ffffff", "border-control": "#8C7D85", "feedback-error-text": "#9F243C", "on-secondary-container": "#7a3446", "outline-variant": "#d9c0c3", "on-tertiary-fixed-variant": "#752f42", "on-error-container": "#93000a", "surface-container-high": "#ebe8e2", "on-tertiary-fixed": "#3d0317", "surface-dim": "#ddd9d4", "surface-container": "#f1ede7", "feedback-success-bg": "#E7EEE7", "surface-variant": "#e6e2dc", "feedback-success-text": "#315D46", "surface-tint": "#994156", "tertiary": "#4d0f22", "outline": "#877275", "on-primary-fixed": "#3f0015", "feedback-warning-bg": "#FFF0D5", "secondary-fixed": "#ffd9df", "feedback-warning-text": "#7A4C15", "inverse-on-surface": "#f4f0ea", "primary": "#510820", "text-secondary": "#6D6268", "secondary-fixed-dim": "#ffb1c1", "on-tertiary": "#ffffff", "error": "#ba1a1a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "space-3xl": "3rem", "space-md": "1rem", "space-lg": "1.25rem", "space-2xl": "2rem", "space-sm": "0.75rem", "gutter": "1.5rem", "space-xl": "1.5rem", "margin": "2rem", "gutter-mobile": "1rem", "space-xs": "0.5rem" }, "fontFamily": { "headline-page": [ "Plus Jakarta Sans" ], "label-field": [ "Plus Jakarta Sans" ], "caption": [ "Plus Jakarta Sans" ], "display-hero-mobile": [ "Plus Jakarta Sans" ], "display-hero": [ "Plus Jakarta Sans" ], "headline-card": [ "Plus Jakarta Sans" ], "body-strong": [ "Plus Jakarta Sans" ], "body-default": [ "Plus Jakarta Sans" ], "body-lead": [ "Plus Jakarta Sans" ], "headline-page-mobile": [ "Plus Jakarta Sans" ], "label-metadata": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-page": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "label-field": [ "14px", { "lineHeight": "20px", "fontWeight": "600" } ], "caption": [ "12px", { "lineHeight": "16px", "fontWeight": "500" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-card": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "body-strong": [ "16px", { "lineHeight": "26px", "fontWeight": "600" } ], "body-default": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "body-lead": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "headline-page-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-metadata": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-default text-text-primary antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="p-space-lg pb-space-sm"><div class="flex items-center gap-space-xs"><span class="w-3 h-3 rounded-full bg-primary-container inline-block"></span><span class="font-headline-card text-headline-card text-primary tracking-tight font-bold">LANGKAHKU</span></div><p class="font-caption text-caption text-text-secondary mt-1">Staff Workspace Portal</p><div class="mt-space-sm inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-domain-kenali-diriku text-primary"><span class="material-symbols-outlined text-[14px]">school</span><span class="font-caption text-caption font-semibold">Guru BK / Staf Pendamping</span></div><div class="mt-2.5 flex items-center gap-1.5 text-text-secondary"><span class="material-symbols-outlined text-[16px]">location_city</span><span class="font-label-metadata text-label-metadata font-medium text-text-primary truncate">SMAN 1 Kota Harapan</span></div></div><div class="px-space-md pt-space-xs"><span class="font-caption text-caption text-text-secondary uppercase tracking-wider px-space-xs block mb-1.5">Layanan Bimbingan</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-body-strong"><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="permintaan-konsultasi" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[20px]">chat_bubble</span><span class="font-label-field text-label-field">Permintaan Konsultasi</span></div><span class="px-2 py-0.5 rounded-full bg-primary text-on-primary text-[11px] font-bold">3 Baru</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="agregat-kebutuhan" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-field text-label-field">Agregat Kebutuhan</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="kelola-konten-dan-layanan" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="font-label-field text-label-field">Kelola Konten &amp; Layanan</span></div></a></nav></div><div class="px-space-md pt-space-lg"><span class="font-caption text-caption text-text-secondary uppercase tracking-wider px-space-xs block mb-1.5">Administrasi Sekolah</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-body-strong"><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="mode-admin-pendaftaran-siswa" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span class="font-label-field text-label-field">Mode Admin: Siswa</span></div><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold">5 Menunggu</span></a></nav></div></div><div class="p-space-md m-space-sm rounded-xl bg-surface-card shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-3"><div class="relative"><div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-feedback-success-text ring-2 ring-surface-card"></span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-field text-label-field text-text-primary truncate">Bu Sari Wulandari, S.Pd.</span><span class="font-caption text-caption text-text-secondary truncate">Guru BK Koordinator</span></div></div><div class="mt-3 pt-2.5 flex items-center justify-between"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-feedback-success-text"></span><span class="font-caption text-caption text-feedback-success-text font-medium">Online</span></div><a class="flex items-center gap-1 font-caption text-caption text-feedback-error-text hover:underline" data-path="login" href="#"><span class="material-symbols-outlined text-[14px]">logout</span><span>Keluar</span></a></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-[72px] bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-[72px] w-full px-space-2xl flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-text-secondary text-[20px]">search</span><input class="w-full h-11 pl-10 pr-4 rounded-xl bg-surface-card text-text-primary placeholder:text-text-secondary font-label-metadata text-label-metadata focus:outline-none focus:ring-2 focus:ring-primary shadow-[0_1px_4px_rgba(0,0,0,0.02)]" placeholder="Cari siswa, kelas, catatan, atau modul..." type="text"/></div><div class="hidden xl:flex items-center gap-1.5 text-text-secondary font-label-metadata text-label-metadata"><span class="material-symbols-outlined text-[18px]">calendar_today</span><span>Rabu, 30 Oktober 2024</span></div></div><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center gap-2 h-11 px-4 rounded-xl bg-feedback-error-bg text-feedback-error-text font-body-strong text-label-field hover:bg-error-container transition-colors shadow-[0_1px_4px_rgba(0,0,0,0.02)]" data-path="panduan-krisis-siswa" href="#"><span class="material-symbols-outlined text-[18px]">emergency</span><span>Butuh bicara sekarang? (Panduan Krisis Siswa)</span></a><button class="relative w-11 h-11 rounded-xl bg-surface-card flex items-center justify-center text-text-secondary hover:text-text-primary shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-[72px] bg-surface-container-low min-h-screen px-space-2xl py-space-2xl"><div class="flex flex-col w-full">
+<!-- Content Header & Actions -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg mb-space-2xl">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-domain-kenali-diriku text-primary mb-2 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span class="font-caption text-caption font-semibold">Kurasi Resmi Satuan Pendidikan SMAN 1 Kota Harapan</span>
+</div>
+<h1 class="font-headline-page text-headline-page text-text-primary tracking-tight">Kelola Konten &amp; Konfigurasi Layanan</h1>
+<p class="font-body-default text-text-secondary mt-1 max-w-3xl">Kurasi informasi jalur resmi, artikel panduan karier siswa, dan pengelolaan parameter layanan bimbingan sekolah dengan pendekatan yang tenang dan terverifikasi.</p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center flex-wrap gap-space-sm shrink-0">
+<button class="h-12 px-4 rounded-xl bg-surface-card text-text-primary font-body-strong text-label-field shadow-sm hover:bg-surface-container-high transition-all flex items-center gap-2 group">
+<span class="material-symbols-outlined text-[20px] text-primary group-hover:rotate-180 transition-transform duration-500">sync</span>
+<span>Sinkronisasi Rujukan Resmi</span>
+</button>
+<button class="h-12 px-5 rounded-xl bg-primary-container text-on-primary font-body-strong text-label-field shadow-md hover:bg-primary transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Tambah Konten Baru</span>
+</button>
+</div>
+</div>
+<!-- Navigation Tabs (2 Primary Tabs) -->
+<div class="flex items-center gap-2 p-1.5 rounded-2xl bg-surface-container mb-space-xl max-w-2xl">
+<button class="flex-1 py-2.5 px-4 rounded-xl bg-surface-card text-primary font-body-strong text-label-field shadow-sm flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-[18px]">library_books</span>
+<span>Katalog Konten Karier</span>
+<span class="px-2 py-0.5 rounded-full bg-domain-kenali-diriku text-primary text-[11px] font-bold">18 Terbit, 3 Draf</span>
+</button>
+<button class="flex-1 py-2.5 px-4 rounded-xl text-text-secondary font-body-strong text-label-field hover:text-text-primary hover:bg-surface-card/60 flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Konfigurasi Layanan &amp; Akun</span>
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+</button>
+</div>
+<!-- Main Work Area: 2-Column Responsive Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-xl items-start">
+<!-- Left Column: Filter Chips & Content Table List (Col 8) -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- Category & Status Filter Bar -->
+<div class="bg-surface-card rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<!-- Categories -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-text-secondary uppercase tracking-wider font-semibold">Kategori Konten Siswa</span>
+<span class="font-caption text-caption text-text-secondary">Menampilkan 5 dari 24 item aktif</span>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<button class="h-8 px-3.5 rounded-full bg-primary-container text-on-primary font-caption text-caption font-semibold flex items-center gap-1.5 shadow-sm">
+<span>Semua Kategori</span>
+<span class="px-1.5 py-0.2 rounded-full bg-white/20 text-[10px]">24</span>
+</button>
+<button class="h-8 px-3.5 rounded-full bg-surface-container-low text-text-primary font-caption text-caption font-medium hover:bg-domain-peta-jalur transition-colors flex items-center gap-1.5">
+<span>Jalur Pascasma</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-[10px] text-text-secondary">6</span>
+</button>
+<button class="h-8 px-3.5 rounded-full bg-surface-container-low text-text-primary font-caption text-caption font-medium hover:bg-domain-timbang-pilihan transition-colors flex items-center gap-1.5">
+<span>Profesi &amp; Kejuruan</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-[10px] text-text-secondary">14</span>
+</button>
+<button class="h-8 px-3.5 rounded-full bg-surface-container-low text-text-primary font-caption text-caption font-medium hover:bg-domain-rencana-langkahku transition-colors flex items-center gap-1.5">
+<span>Cerita Alumni</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-[10px] text-text-secondary">4</span>
+</button>
+<button class="h-8 px-3.5 rounded-full bg-surface-container-low text-text-primary font-caption text-caption font-medium hover:bg-domain-kenali-diriku transition-colors flex items-center gap-1.5">
+<span>Lembar Diskusi Orang Tua</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-[10px] text-text-secondary">2</span>
+</button>
+</div>
+</div>
+<div class="h-px w-full bg-surface-container"></div>
+<!-- Status Filter & Search Inside Table -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="font-caption text-caption text-text-secondary font-medium">Status:</span>
+<div class="inline-flex p-1 rounded-xl bg-surface-container-low">
+<button class="px-2.5 py-1 rounded-lg bg-surface-card text-text-primary font-caption text-caption font-semibold shadow-xs">Semua</button>
+<button class="px-2.5 py-1 rounded-lg text-text-secondary hover:text-text-primary font-caption text-caption font-medium">Terbit (18)</button>
+<button class="px-2.5 py-1 rounded-lg text-feedback-warning-text font-caption text-caption font-medium">Draf / Tinjauan (3)</button>
+<button class="px-2.5 py-1 rounded-lg text-text-secondary hover:text-text-primary font-caption text-caption font-medium">Arsip (3)</button>
+</div>
+</div>
+<div class="flex items-center gap-2 text-text-secondary font-caption text-caption">
+<span class="material-symbols-outlined text-[16px] text-feedback-success-text">verified</span>
+<span>Rujukan tersinkronisasi otomatis via API Kemendikbudristek</span>
+</div>
+</div>
+</div>
+<!-- Content Management Cards List -->
+<div class="flex flex-col gap-space-md">
+<!-- Item 1: Selected / Primary Highlight (Kuliah Seleksi Nasional SNBP & SNBT) -->
+<div class="p-space-lg rounded-2xl bg-surface-card shadow-sm hover:shadow-md transition-shadow relative overflow-hidden ring-2 ring-primary">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-primary"></div>
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="flex items-start gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-domain-kenali-diriku flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-domain-kenali-diriku text-primary font-caption text-caption font-semibold">Jalur Induk 01</span>
+<span class="px-2.5 py-0.5 rounded-full bg-feedback-success-bg text-feedback-success-text font-caption text-caption font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Terbit (Versi 2.1)
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-text-secondary font-caption text-caption">Paket Luring Ready</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Kuliah Seleksi Nasional (SNBP &amp; SNBT)</h3>
+<p class="font-body-default text-text-secondary text-sm mt-0.5">Panduan persyaratan nilai rapor, eligibilitas sekolah, portofolio kejuruan, dan kalender serentak nasional 2025.</p>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-4 mt-3 text-text-secondary font-label-metadata text-caption">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">person</span> Reviewer: Bu Sari Wulandari, S.Pd.
+                  </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">schedule</span> 15 Okt 2024
+                  </span>
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">link</span> Rujukan: Portal SNPMB 2024/2025
+                  </span>
+</div>
+</div>
+</div>
+<!-- Contextual Item Actions -->
+<div class="flex items-center gap-2 shrink-0 self-end md:self-start">
+<button class="h-9 px-3 rounded-lg bg-surface-container-low text-text-primary hover:bg-surface-container font-label-field text-caption flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Pratinjau
+              </button>
+<button class="h-9 px-3 rounded-lg bg-primary-container text-on-primary font-label-field text-caption flex items-center gap-1 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit_note</span> Edit
+              </button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-low text-text-secondary hover:text-text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2: Kerja & Pelatihan BNSP / BLK -->
+<div class="p-space-lg rounded-2xl bg-surface-card shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="flex items-start gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-domain-peta-jalur flex items-center justify-center shrink-0 text-feedback-success-text">
+<span class="material-symbols-outlined text-[24px]">engineering</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-domain-peta-jalur text-feedback-success-text font-caption text-caption font-semibold">Jalur Induk 04</span>
+<span class="px-2.5 py-0.5 rounded-full bg-feedback-success-bg text-feedback-success-text font-caption text-caption font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Terbit (Versi 1.4)
+                  </span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Kerja &amp; Pelatihan Sertifikasi BNSP / BLK</h3>
+<p class="font-body-default text-text-secondary text-sm mt-0.5">Pemetaan kompetensi lulusan SMA/SMK, program vokasi BLK daerah, dan sertifikasi standar nasional kerja.</p>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-4 mt-3 text-text-secondary font-label-metadata text-caption">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">person</span> Reviewer: Pak Hendra Gunawan, S.Psi.
+                  </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">schedule</span> 22 Okt 2024
+                  </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">corporate_fare</span> Sumber: SiapKerja Kemnaker RI
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 self-end md:self-start">
+<button class="h-9 px-3 rounded-lg bg-surface-container-low text-text-primary hover:bg-surface-container font-label-field text-caption flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Pratinjau
+              </button>
+<button class="h-9 px-3 rounded-lg bg-surface-card hover:bg-surface-container-low text-primary border-decorative font-label-field text-caption flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span> Edit
+              </button>
+</div>
+</div>
+</div>
+<!-- Item 3: Beasiswa KIP Kuliah (Draft / In Review) -->
+<div class="p-space-lg rounded-2xl bg-surface-card shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="flex items-start gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-feedback-warning-bg flex items-center justify-center shrink-0 text-feedback-warning-text">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-domain-timbang-pilihan text-primary font-caption text-caption font-semibold">Pendanaan &amp; Subsidi</span>
+<span class="px-2.5 py-0.5 rounded-full bg-feedback-warning-bg text-feedback-warning-text font-caption text-caption font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pending</span> Draf / Perlu Tinjauan
+                  </span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Beasiswa KIP Kuliah Jalur Vokasi &amp; Reguler</h3>
+<div class="my-2 p-2.5 rounded-xl bg-feedback-warning-bg/40 flex items-start gap-2 text-feedback-warning-text text-caption">
+<span class="material-symbols-outlined text-[16px] shrink-0 mt-0.5">info</span>
+<span><strong>Catatan Guru BK:</strong> Menunggu pengesahan resmi kuota desil DTKS semester genap dari Pusat Pembiayaan Pendidikan Kemendikbud. Rilis ditunda hingga 5 November.</span>
+</div>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-4 mt-2 text-text-secondary font-label-metadata text-caption">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">person</span> Reviewer: Bu Sari Wulandari, S.Pd.
+                  </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">update</span> Disunting 2 hari lalu
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 self-end md:self-start">
+<button class="h-9 px-3 rounded-lg bg-surface-container-low text-text-primary hover:bg-surface-container font-label-field text-caption flex items-center gap-1 transition-colors">
+                Lanjutkan Review
+              </button>
+<button class="h-9 px-3.5 rounded-lg bg-primary-container text-on-primary font-label-field text-caption flex items-center gap-1 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">publish</span> Terbitkan
+              </button>
+</div>
+</div>
+</div>
+<!-- Item 4: Cerita Langkah Alumni (Dimas) -->
+<div class="p-space-lg rounded-2xl bg-surface-card shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="flex items-start gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-domain-rencana-langkahku flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[24px]">history_edu</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-domain-rencana-langkahku text-text-primary font-caption text-caption font-semibold">Cerita Langkah Alumni</span>
+<span class="px-2.5 py-0.5 rounded-full bg-feedback-success-bg text-feedback-success-text font-caption text-caption font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Izin Publikasi Terverifikasi
+                  </span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Cerita Langkah: Sukses Jalur Magang Industri (Dimas Pratama - Angkatan '22)</h3>
+<p class="font-body-default text-text-secondary text-sm mt-0.5">Refleksi alumni menempuh jalur magang manufaktur otomotif hingga mendapat kontrak teknisi bersertifikat tanpa kuliah sarjana.</p>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-4 mt-3 text-text-secondary font-label-metadata text-caption">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">verified</span> Disetujui Alumni &amp; Komite Sekolah
+                  </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">visibility</span> Dibaca 318 siswa
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 self-end md:self-start">
+<button class="h-9 px-3 rounded-lg bg-surface-container-low text-text-primary hover:bg-surface-container font-label-field text-caption flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Pratinjau
+              </button>
+<button class="h-9 px-3 rounded-lg bg-surface-card hover:bg-surface-container-low text-primary font-label-field text-caption flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span> Edit
+              </button>
+</div>
+</div>
+</div>
+<!-- Item 5: Lembar Diskusi Orang Tua -->
+<div class="p-space-lg rounded-2xl bg-surface-card shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="flex items-start gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">family_restroom</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-text-primary font-caption text-caption font-semibold">Lembar Kerja &amp; Panduan</span>
+<span class="px-2.5 py-0.5 rounded-full bg-feedback-success-bg text-feedback-success-text font-caption text-caption font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">print</span> Siap Cetak A4 / PDF
+                  </span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Panduan Diskusi Karier Hangat dengan Orang Tua</h3>
+<p class="font-body-default text-text-secondary text-sm mt-0.5">Instrumen 4 pertanyaan reflektif untuk memfasilitasi dialog ekspektasi studi antara siswa dan wali murid tanpa konflik emosional.</p>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-4 mt-3 text-text-secondary font-label-metadata text-caption">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">download</span> 142 Unduhan Guru &amp; Wali Siswa
+                  </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">description</span> 2 Halaman Ringkas
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 self-end md:self-start">
+<button class="h-9 px-3 rounded-lg bg-surface-container-low text-text-primary hover:bg-surface-container font-label-field text-caption flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">file_download</span> Unduh PDF
+              </button>
+<button class="h-9 px-3 rounded-lg bg-surface-card hover:bg-surface-container-low text-primary font-label-field text-caption flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span> Perbarui Lembar
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Inline Contextual Detail & Quick Preview Panel (Col 4) -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg sticky top-[92px]">
+<!-- Drawer Card: Ringkasan Rincian Konten (Focused item) -->
+<div class="rounded-2xl bg-surface-card p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-feedback-success-text"></span>
+<span class="font-caption text-caption text-text-secondary font-semibold uppercase tracking-wider">Pratinjau Rincian Terpilih</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-domain-kenali-diriku text-primary font-caption text-caption font-bold">Jalur 01</span>
+</div>
+<div>
+<h2 class="font-headline-card text-headline-card text-text-primary leading-tight">Kuliah Seleksi Nasional (SNBP &amp; SNBT)</h2>
+<p class="font-label-metadata text-caption text-text-secondary mt-1">ID Modul: <code class="px-1.5 py-0.5 rounded bg-surface-container font-mono text-[11px] text-text-primary">MOD-PASCA-01-SNPMB</code></p>
+</div>
+<!-- Meta Specification Tiles -->
+<div class="grid grid-cols-2 gap-2.5">
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col justify-between">
+<span class="font-caption text-caption text-text-secondary">Visibilitas Tamu</span>
+<span class="font-label-field text-label-field text-text-primary font-semibold flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] text-feedback-success-text">public</span> Terbuka Publik
+            </span>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col justify-between">
+<span class="font-caption text-caption text-text-secondary">Paket Luring</span>
+<span class="font-label-field text-label-field text-text-primary font-semibold flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] text-primary">offline_pin</span> 420 KB (V 2.1)
+            </span>
+</div>
+</div>
+<!-- Official Reference Verified Box -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between text-caption">
+<span class="font-semibold text-text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-feedback-success-text">verified</span>
+              Sumber Resmi Terverifikasi
+            </span>
+<span class="text-feedback-success-text font-medium">HTTP 200 OK</span>
+</div>
+<a class="p-2 rounded-lg bg-surface-card text-primary font-label-metadata text-caption flex items-center justify-between truncate hover:underline" href="https://snpmb.bppp.kemdikbud.go.id" rel="noopener noreferrer" target="_blank">
+<span class="truncate">https://snpmb.bppp.kemdikbud.go.id</span>
+<span class="material-symbols-outlined text-[14px] shrink-0 ml-1">open_in_new</span>
+</a>
+<span class="font-caption text-[11px] text-text-secondary">Pengecekan bot validasi terakhir: Pagi ini, 06.00 WIB</span>
+</div>
+<!-- Audit & Review Timeline -->
+<div class="flex flex-col gap-2 pt-2 text-caption">
+<div class="flex items-center justify-between">
+<span class="text-text-secondary">Penanggung Jawab Kurasi</span>
+<span class="font-semibold text-text-primary">Bu Sari Wulandari, S.Pd.</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-text-secondary">Tinjauan Terakhir</span>
+<span class="font-medium text-text-primary">15 Oktober 2024</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-text-secondary">Jadwal Tinjauan Ulang</span>
+<span class="font-semibold text-feedback-warning-text flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">event_repeat</span> 15 Januari 2025
+            </span>
+</div>
+</div>
+<!-- Inline Visual Distribution Chart (Inline SVG) -->
+<div class="p-3.5 rounded-xl bg-domain-kenali-diriku/50 flex flex-col gap-2">
+<span class="font-caption text-caption text-primary font-semibold">Distribusi Minat Siswa pada Jalur Ini (SMAN 1)</span>
+<div class="flex items-center gap-3">
+<div class="relative w-14 h-14 shrink-0">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<!-- Background Circle -->
+<path class="text-surface-card" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4.5"></path>
+<!-- Progress Circle (62%) -->
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="62, 100" stroke-linecap="round" stroke-width="4.5"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-bold text-primary text-caption">62%</div>
+</div>
+<div class="flex flex-col text-caption">
+<span class="font-semibold text-text-primary">184 dari 296 Siswa Angkatan XII</span>
+<span class="text-text-secondary text-[12px]">Menyimpan artikel ini di 'Rencana Langkahku'</span>
+</div>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="flex flex-col gap-2 pt-space-xs">
+<button class="w-full h-11 px-4 rounded-xl bg-primary-container text-on-primary font-body-strong text-label-field flex items-center justify-center gap-2 hover:bg-primary transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">edit_document</span>
+<span>Buka Editor Lengkap</span>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-10 px-3 rounded-xl bg-surface-container-low text-text-primary hover:bg-surface-container font-label-field text-caption flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh PDF
+            </button>
+<button class="h-10 px-3 rounded-xl bg-surface-container-low text-feedback-error-text hover:bg-feedback-error-bg font-label-field text-caption flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">archive</span> Arsipkan
+            </button>
+</div>
+</div>
+</div>
+<!-- Quick Guidance Box for BK Staff -->
+<div class="rounded-2xl bg-surface-card p-space-lg shadow-sm flex items-start gap-3">
+<div class="w-9 h-9 rounded-full bg-domain-peta-jalur flex items-center justify-center shrink-0 text-feedback-success-text">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-field text-label-field text-text-primary">Prinsip Kurasi Bahasa</span>
+<p class="font-caption text-caption text-text-secondary mt-1">Pastikan setiap perubahan menggunakan bahasa yang menenangkan (*"Pelan-pelan, yang penting mulai"*) dan menyertakan tenggat waktu yang realistis bagi siswa.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Parameter Layanan & Konfigurasi Sekolah Preview (Tab 2 Teaser) -->
+<div class="mt-space-3xl pt-space-2xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-lg">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-caption text-caption text-primary uppercase font-bold tracking-wider">Konfigurasi Operasional</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-caption text-caption text-text-secondary">Sistem &amp; Kebijakan SMAN 1</span>
+</div>
+<h2 class="font-headline-card text-headline-page-mobile text-text-primary">Parameter Layanan Bimbingan &amp; Saluran Siswa</h2>
+</div>
+<button class="h-10 px-4 rounded-xl bg-surface-card hover:bg-surface-container text-primary font-body-strong text-label-field shadow-sm flex items-center gap-1.5 self-start sm:self-auto transition-colors">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+<span>Ubah Konfigurasi Bimbingan</span>
+</button>
+</div>
+<!-- 3 Configuration Cards Bento -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Card 1: Jam Operasional -->
+<div class="p-space-lg rounded-2xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-10 h-10 rounded-xl bg-domain-kenali-diriku text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</span>
+<span class="px-2.5 py-0.5 rounded-full bg-feedback-success-bg text-feedback-success-text font-caption text-caption font-semibold">Aktif</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Jam Layanan &amp; SLA Respon</h3>
+<p class="font-body-default text-text-secondary text-sm mt-1">Senin – Jumat, pukul 08.00 – 15.00 WIB di lingkungan sekolah.</p>
+</div>
+<div class="mt-space-md pt-3 bg-surface-container-low p-3 rounded-xl">
+<div class="flex items-center justify-between text-caption">
+<span class="text-text-secondary">Target SLA Balas:</span>
+<span class="font-semibold text-text-primary">Maksimal 1 x 24 Jam Kerja</span>
+</div>
+<div class="flex items-center justify-between text-caption mt-1">
+<span class="text-text-secondary">Kapasitas Slot Harian:</span>
+<span class="font-semibold text-text-primary">12 Sesi Tatap Muka</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Ruang Pertemuan -->
+<div class="p-space-lg rounded-2xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-10 h-10 rounded-xl bg-domain-timbang-pilihan text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">meeting_room</span>
+</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-text-secondary font-caption text-caption font-semibold">3 Lokasi</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Ruang Pertemuan Konseling</h3>
+<p class="font-body-default text-text-secondary text-sm mt-1">Pilihan ruang privat dan inklusif yang dapat dipilih siswa saat reservasi.</p>
+</div>
+<div class="mt-space-md flex flex-col gap-1.5">
+<div class="flex items-center justify-between px-3 py-2 rounded-xl bg-surface-container-low text-caption">
+<span class="font-medium text-text-primary">Ruang BK 1 (Sesi Privat)</span>
+<span class="text-feedback-success-text font-semibold flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-feedback-success-text"></span> Tersedia</span>
+</div>
+<div class="flex items-center justify-between px-3 py-2 rounded-xl bg-surface-container-low text-caption">
+<span class="font-medium text-text-primary">Ruang BK 2 &amp; Pojok Literasi</span>
+<span class="text-text-secondary font-medium">Bisa Digunakan</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Saluran Krisis Remaja -->
+<div class="p-space-lg rounded-2xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-10 h-10 rounded-xl bg-feedback-error-bg text-feedback-error-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+</span>
+<span class="px-2.5 py-0.5 rounded-full bg-feedback-error-bg text-feedback-error-text font-caption text-caption font-bold">24 Jam Siaga</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Protokol Krisis Siswa</h3>
+<p class="font-body-default text-text-secondary text-sm mt-1">Integrasi tombol bantuan darurat psikologis pada aplikasi siswa.</p>
+</div>
+<div class="mt-space-md pt-3 bg-surface-container-low p-3 rounded-xl flex flex-col gap-1">
+<div class="flex items-center justify-between text-caption">
+<span class="text-text-secondary">Rujukan Nasional:</span>
+<span class="font-bold text-feedback-error-text">SEJIWA (119 ext. 8)</span>
+</div>
+<div class="flex items-center justify-between text-caption">
+<span class="text-text-secondary">Kontak Darurat Sekolah:</span>
+<span class="font-medium text-text-primary">+62 811-2345-BK01</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

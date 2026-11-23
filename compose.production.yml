@@ -1,0 +1,126 @@
+name: langkahku
+x-app: &app
+  image: langkahku:${RELEASE_TAG:-local}
+  build: .
+  environment: &runtime-env
+    NODE_ENV: production
+    APP_ORIGIN: ${APP_ORIGIN:?Configure APP_ORIGIN}
+    DATABASE_URL: ${DATABASE_URL:?Configure DATABASE_URL}
+    SESSION_SECRET: ${SESSION_SECRET:?Configure SESSION_SECRET}
+    TRUST_PROXY: "1"
+    DEMO_MODE: "false"
+    RETENTION_ENABLED: ${RETENTION_ENABLED:-false}
+    PENDING_RETENTION_DAYS: ${PENDING_RETENTION_DAYS:-30}
+    DELETION_LEDGER_PATH: /state/deletion-ledger.ndjson
+    BACKUP_DIRECTORY: /backups
+  init: true
+  read_only: true
+  tmpfs:
+    - /tmp:size=64m,mode=1777
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  stop_grace_period: 30s
+  logging:
+    driver: json-file
+    options: { max-size: "10m", max-file: "3" }
+  volumes:
+    - deletion-state:/state:ro
+    - encrypted-backups:/backups:ro
+
+services:
+  database:
+    image: postgres:15-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?Configure POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Configure POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-langkahku}
+      APP_DB_PASSWORD: ${APP_DB_PASSWORD:?Configure APP_DB_PASSWORD}
+    # The maintenance user is used for migrations; grant runtime access separately.
+    volumes:
+      - database:/var/lib/postgresql/data
+      - ./deploy/init-database.sh:/docker-entrypoint-initdb.d/10-runtime.sh:ro
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
+
+  migrate:
+    <<: *app
+    environment:
+      <<: *runtime-env
+      MIGRATION_DATABASE_URL: ${MIGRATION_DATABASE_URL:?Configure MIGRATION_DATABASE_URL}
+    restart: "no"
+    command: [node, scripts/migrate-production.js]
+    depends_on:
+      database: { condition: service_healthy }
+    healthcheck: { disable: true }
+
+  api:
+    <<: *app
+    restart: unless-stopped
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+
+  worker:
+    <<: *app
+    volumes:
+      - deletion-state:/state
+      - encrypted-backups:/backups:ro
+    restart: unless-stopped
+    command: [node, scripts/job-worker.js]
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+    healthcheck:
+      test: [CMD, node, scripts/check-worker.js]
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 3
+
+  backup:
+    <<: *app
+    volumes:
+      - deletion-state:/state:ro
+      - encrypted-backups:/backups
+    environment:
+      <<: *runtime-env
+      BACKUP_KEY: ${BACKUP_KEY:?Configure BACKUP_KEY}
+    restart: unless-stopped
+    command: [node, scripts/backup-worker.js]
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+    healthcheck:
+      test: [CMD, node, scripts/check-backup.js]
+      interval: 1h
+      timeout: 10s
+      start_period: 3m
+      retries: 2
+
+  proxy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      DOMAIN: ${DOMAIN:?Configure DOMAIN}
+      ACME_EMAIL: ${ACME_EMAIL:?Configure ACME_EMAIL}
+    ports: ["80:80", "443:443", "443:443/udp"]
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      api: { condition: service_healthy }
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
+
+volumes:
+  database:
+  deletion-state:
+  encrypted-backups:
+  caddy-data:
+  caddy-config:

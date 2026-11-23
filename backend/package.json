@@ -1,0 +1,48 @@
+{
+  "name": "langkahku-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "check:production": "node --env-file-if-exists=.env scripts/check-production.js",
+    "predev": "node --env-file=.env scripts/prepare-dev.js",
+    "dev": "node --watch --env-file=.env src/server.js",
+    "start": "node --env-file=.env src/server.js",
+    "db:local": "node scripts/local-db.js",
+    "db:stop": "node scripts/local-db.js stop",
+    "migrate": "node --env-file=.env scripts/migrate.js",
+    "bootstrap": "node --env-file=.env scripts/bootstrap-superadmin.js",
+    "setup:production": "node --env-file-if-exists=.env scripts/prepare-production.js",
+    "retention": "node --env-file=.env scripts/run-retention.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "node --env-file=.env --test --test-concurrency=1 tests/*.test.js",
+    "backup": "node --env-file=.env scripts/backup.js",
+    "restore": "node --env-file=.env scripts/restore.js",
+    "db:migrate": "node --env-file=.env scripts/migrate.js",
+    "bootstrap:superadmin": "node --env-file=.env scripts/bootstrap-superadmin.js",
+    "jobs:retention": "node --env-file=.env scripts/run-retention.js",
+    "jobs:work": "node --env-file=.env scripts/job-worker.js"
+  },
+  "dependencies": {
+    "argon2": "^0.44.0",
+    "connect-pg-simple": "^10.0.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.2.0",
+    "express-session": "^1.18.2",
+    "helmet": "^8.1.0",
+    "pg": "^8.16.3",
+    "pino": "^10.1.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "prettier": "^3.6.2",
+    "supertest": "^7.1.4"
+  }
+}

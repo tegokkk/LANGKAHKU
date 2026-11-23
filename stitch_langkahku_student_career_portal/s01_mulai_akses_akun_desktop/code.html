@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>LANGKAHKU - Pendamping Karier Siswa SMA</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "domain-timbang-pilihan": "#EEE9F6", "on-secondary-fixed": "#3d0418", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#752f42", "border-control": "#8C7D85", "surface-card": "#FFFFFF", "on-tertiary-container": "#e98da1", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "inverse-on-surface": "#f4f0ea", "tertiary-fixed": "#ffd9df", "secondary-container": "#fea1b5", "text-primary": "#241A20", "domain-kenali-diriku": "#F6E6EA", "feedback-error-bg": "#FBE7ED", "on-error": "#ffffff", "surface-tint": "#994156", "surface-container-low": "#f7f3ed", "secondary-fixed-dim": "#ffb1c1", "feedback-success-bg": "#E7EEE7", "outline": "#877275", "on-primary-container": "#f1889d", "on-surface-variant": "#544245", "error": "#ba1a1a", "on-tertiary-fixed": "#3d0317", "primary": "#510820", "background": "#fdf9f3", "on-primary-fixed-variant": "#7b2a3f", "on-secondary-fixed-variant": "#753042", "feedback-success-text": "#315D46", "border-decorative": "#E7DEE2", "on-surface": "#1c1c18", "on-background": "#1c1c18", "inverse-primary": "#ffb2bf", "feedback-warning-bg": "#FFF0D5", "tertiary-container": "#692538", "tertiary": "#4d0f22", "on-secondary-container": "#7a3446", "on-primary-fixed": "#3f0015", "secondary": "#914759", "domain-rencana-langkahku": "#F9E7DB", "domain-peta-jalur": "#E7EEE7", "surface-variant": "#e6e2dc", "on-error-container": "#93000a", "primary-fixed-dim": "#ffb2bf", "surface": "#fdf9f3", "surface-dim": "#ddd9d4", "primary-fixed": "#ffd9de", "outline-variant": "#d9c0c3", "feedback-error-text": "#9F243C", "surface-container": "#f1ede7", "on-primary": "#ffffff", "secondary-fixed": "#ffd9df", "tertiary-fixed-dim": "#ffb1c1", "surface-bright": "#fdf9f3", "surface-container-high": "#ebe8e2", "primary-container": "#6e2035", "surface-container-highest": "#e6e2dc", "on-tertiary": "#ffffff", "feedback-warning-text": "#7A4C15", "inverse-surface": "#31302d", "text-secondary": "#6D6268" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-2xl": "2rem", "margin": "2rem", "space-xs": "0.5rem", "space-lg": "1.25rem", "space-xl": "1.5rem", "space-3xl": "3rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "margin-mobile": "1rem", "space-sm": "0.75rem" }, "fontFamily": { "body-strong": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "headline-card": ["Plus Jakarta Sans"], "body-default": ["Plus Jakarta Sans"], "headline-page-mobile": ["Plus Jakarta Sans"], "caption": ["Plus Jakarta Sans"], "label-field": ["Plus Jakarta Sans"], "label-metadata": ["Plus Jakarta Sans"], "body-lead": ["Plus Jakarta Sans"], "headline-page": ["Plus Jakarta Sans"] }, "fontSize": { "body-strong": ["16px", { "lineHeight": "26px", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-card": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-default": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-page-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "caption": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "label-field": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "label-metadata": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lead": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-page": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-default text-text-primary antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1200px] mx-auto px-space-md lg:px-margin flex items-center justify-between gap-space-lg"><a class="flex items-center gap-space-sm group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-container rounded-lg" data-path="beranda" href="#"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary transition-transform group-hover:scale-95"><span class="material-symbols-outlined text-[22px]">route</span></div><div class="flex flex-col"><span class="font-headline-card text-headline-card text-primary tracking-tight leading-none">LANGKAHKU</span><span class="font-caption text-caption text-text-secondary leading-tight mt-0.5">Pendamping Karier Siswa SMA</span></div></a><nav class="hidden md:flex items-center gap-space-xs" data-active-classes="bg-domain-kenali-diriku text-primary font-body-strong"><a aria-current="page" class="px-space-md py-space-xs rounded-xl transition-colors bg-domain-kenali-diriku text-primary font-body-strong" data-path="beranda" href="#">Beranda</a><a class="px-space-md py-space-xs rounded-xl font-label-metadata text-label-metadata text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="peta-jalur-publik" href="#">Peta Jalur (Publik)</a><a class="px-space-md py-space-xs rounded-xl font-label-metadata text-label-metadata text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="panduan-orang-tua" href="#">Panduan Orang Tua</a><a class="px-space-md py-space-xs rounded-xl font-label-metadata text-label-metadata text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="bantuan" href="#">Bantuan</a></nav><div class="flex items-center gap-space-sm"><a class="hidden xl:flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-feedback-warning-bg text-feedback-warning-text font-caption text-caption transition-opacity hover:opacity-90" data-path="bantuan" href="#"><span class="material-symbols-outlined text-[16px]">support_agent</span><span>Butuh bicara sekarang? (24 Jam)</span></a><a class="h-12 px-space-lg rounded-xl bg-transparent border border-border-control text-text-primary hover:bg-surface-card hover:text-on-surface font-body-strong text-body-strong flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-container" data-path="eksplorasi-tamu" href="#">Jelajahi Tanpa Akun</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0" title="Profil Pengunjung"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface flex-1"><div class="max-w-[1200px] mx-auto px-space-md lg:px-margin py-space-2xl"><div class="flex flex-col w-full gap-space-3xl">
+<!-- Top Split Stage: Editorial Left & Unified Auth Right -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-start pt-space-xs">
+<!-- Left Column: Inspiring Welcome & Calm Narrative (~560px / 6.5 cols) -->
+<div class="lg:col-span-6 flex flex-col gap-space-xl">
+<!-- Official Badge Pill -->
+<div class="inline-flex items-center gap-2 self-start px-space-md py-1.5 rounded-full bg-feedback-success-bg text-feedback-success-text shadow-sm">
+<span class="material-symbols-outlined text-[16px]">school</span>
+<span class="font-caption text-caption tracking-normal">Website Resmi Pendamping Perencanaan Karier Siswa SMA</span>
+</div>
+<!-- Main Heading & Manifesto -->
+<div class="flex flex-col gap-space-sm">
+<h1 class="font-display-hero text-headline-page lg:text-display-hero text-text-primary tracking-tight leading-tight">
+          Masa depanmu,<br/>
+<span class="text-primary-container">dimulai dari satu langkah.</span>
+</h1>
+<p class="font-body-lead text-body-lead text-text-secondary leading-relaxed">
+          Kenali minat dan kekuatanmu, jelajahi ratusan jalur kuliah maupun kerja tanpa rasa cemas, dan susun rencana langkahmu bersama guru BK sekolah secara bertahap dan tenang.
+        </p>
+</div>
+<!-- Feature Highlight Badges (Pastel Domain Tone) -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="flex items-start gap-2.5 p-space-sm rounded-xl bg-domain-kenali-diriku text-text-primary">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">favorite</span>
+<div class="flex flex-col">
+<span class="font-label-field text-label-field">Kenali Diriku</span>
+<span class="font-caption text-caption text-text-secondary">Refleksi mandiri, bukan tes yang menghakimi.</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5 p-space-sm rounded-xl bg-domain-peta-jalur text-text-primary">
+<span class="material-symbols-outlined text-feedback-success-text text-[20px] mt-0.5">explore</span>
+<div class="flex flex-col">
+<span class="font-label-field text-label-field">Peta Jalur</span>
+<span class="font-caption text-caption text-text-secondary">Kuliah, kerja, vokasi, dan wirausaha terbuka.</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5 p-space-sm rounded-xl bg-domain-rencana-langkahku text-text-primary">
+<span class="material-symbols-outlined text-feedback-warning-text text-[20px] mt-0.5">lock_open</span>
+<div class="flex flex-col">
+<span class="font-label-field text-label-field">Privasi Terjaga</span>
+<span class="font-caption text-caption text-text-secondary">Jurnal milik siswa, aman dan terlindungi.</span>
+</div>
+</div>
+</div>
+<!-- Quick Guest Action Card -->
+<div class="p-space-lg rounded-2xl bg-surface-card shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[22px]">map</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-field text-label-field text-text-primary">Ingin melihat informasi tanpa masuk akun?</span>
+<span class="font-caption text-caption text-text-secondary">Akses katalog umum jurusan, perkiraan biaya kuliah, dan panduan dasar.</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-1.5 px-space-md py-2.5 rounded-xl bg-surface-container hover:bg-surface-variant font-label-field text-label-field text-primary transition-colors whitespace-nowrap self-stretch sm:self-auto justify-center" data-path="peta-jalur-publik" href="#">
+<span>Jelajahi Sebagai Tamu</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Alumni / Philosophy Quote Callout -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-full bg-domain-timbang-pilihan flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">format_quote</span>
+</div>
+<div class="flex flex-col">
+<p class="font-body-default text-body-default text-text-primary italic">
+            “Pelan-pelan, yang penting mulai. Pilihan hidup itu dijalani dengan kesadaran, bukan keterpaksaan.”
+          </p>
+<span class="font-caption text-caption text-text-secondary mt-0.5">Ruang Belajar BK • Siswa Angkatan 2024</span>
+</div>
+</div>
+<!-- Visual Context: Authentic Student Reflection Snapshot -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container h-44 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A warm, cinematic documentary photograph of Indonesian high school students sitting in a well-lit, natural wood library classroom, discussing career and college pathways with notebook journals open, soft golden morning light, deep maroon and ivory tones, respectful and hopeful atmosphere, shot on 35mm lens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzDJWUDOrX5wJkRwFbKNSNVExUjLVW0f5VcX5bT9N47nboZ1KIInwPbZWBWfjUwKAMb34wQaseSfIutdqcxE_HA1GzheVG4aUGRRrkHKtq1AikmlfSk1blIRhcvrpd9iUChJc6yPzJ4bw2MqOBDwUzo4I4TYEpHols2MCCgwzm8xVaSHQrK6PUlOU4onHCntKyhOop_iCuYaNhUixwTz6DhDmSy9OzkfwqwtdJ2MY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent flex items-end p-space-md">
+<span class="font-caption text-caption text-surface-card bg-primary-container/80 backdrop-blur-md px-space-sm py-1 rounded-full">
+            Pendampingan Siswa SMA Terintegrasi di 34 Provinsi
+          </span>
+</div>
+</div>
+</div>
+<!-- Right Column: Unified Authentication & Onboarding Hub (~560px / 5.5 cols) -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<!-- Central Auth Card -->
+<div class="w-full bg-surface-card rounded-2xl shadow-md p-space-xl flex flex-col gap-space-lg">
+<!-- Tab Switcher (Masuk / Daftar Siswa Baru / Cek Status) -->
+<div class="grid grid-cols-3 p-1 rounded-xl bg-surface-container gap-1" role="tablist">
+<button aria-selected="true" class="auth-tab-btn py-2 px-space-xs rounded-lg font-label-field text-label-field transition-all text-center bg-surface-card text-primary shadow-sm" id="tab-btn-login" onclick="switchAuthTab('login')" role="tab" type="button">
+            Masuk Akun
+          </button>
+<button aria-selected="false" class="auth-tab-btn py-2 px-space-xs rounded-lg font-label-field text-label-field transition-all text-center text-text-secondary hover:text-text-primary" id="tab-btn-register" onclick="switchAuthTab('register')" role="tab" type="button">
+            Daftar Baru
+          </button>
+<button aria-selected="false" class="auth-tab-btn py-2 px-space-xs rounded-lg font-label-field text-label-field transition-all text-center text-text-secondary hover:text-text-primary" id="tab-btn-status" onclick="switchAuthTab('status')" role="tab" type="button">
+            Cek Status
+          </button>
+</div>
+<!-- TAB CONTENT 1: Universal Login (Default Visible) -->
+<div class="flex flex-col gap-space-lg" id="tab-content-login">
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-card text-headline-card text-text-primary">
+              Selamat datang kembali
+            </h2>
+<p class="font-body-default text-body-default text-text-secondary">
+              Akses ruang pribadi untuk melanjutkan eksplorasi dan jurnal belajarmu.
+            </p>
+</div>
+<!-- Role Auto-Detection Privacy Pill -->
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low text-text-secondary">
+<span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
+<span class="font-caption text-caption">
+              Satu pintu masuk untuk Siswa, Guru BK, dan Admin Sekolah. Sistem memvalidasi peranmu otomatis.
+            </span>
+</div>
+<!-- Universal Login Form -->
+<form class="flex flex-col gap-space-md" onsubmit="event.preventDefault(); handleLoginSubmit();">
+<!-- Username / ID Akun Field -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-field text-label-field text-text-primary flex items-center justify-between" for="username-input">
+<span>Username atau ID Akun</span>
+<span class="font-caption text-caption text-text-secondary">Contoh: nama.kamu / bk.sari</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-text-secondary text-[20px] pointer-events-none">account_circle</span>
+<input class="w-full h-12 pl-11 pr-4 rounded-xl bg-surface-container-lowest text-text-primary font-body-default text-body-default placeholder:text-text-secondary shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="username-input" placeholder="Ketik username terdaftar..." required="" type="text"/>
+</div>
+</div>
+<!-- Password Field with Toggle -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-field text-label-field text-text-primary" for="password-input">
+                  Kata Sandi
+                </label>
+<a class="font-caption text-caption text-primary hover:underline" href="#" onclick="event.preventDefault(); showPasswordRecoveryModal();">
+                  Lupa kata sandi?
+                </a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-text-secondary text-[20px] pointer-events-none">lock</span>
+<input class="w-full h-12 pl-11 pr-11 rounded-xl bg-surface-container-lowest text-text-primary font-body-default text-body-default placeholder:text-text-secondary shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="password-input" placeholder="Masukkan kata sandi akun..." required="" type="password"/>
+<button aria-label="Tampilkan atau sembunyikan kata sandi" class="absolute right-3.5 text-text-secondary hover:text-text-primary flex items-center justify-center p-1" onclick="togglePasswordVisibility('password-input', this)" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Login Action Button -->
+<button class="w-full h-12 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-body-strong text-body-strong flex items-center justify-center gap-2 shadow-sm transition-colors mt-space-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-container" id="login-submit-btn" type="submit">
+<span>Masuk ke Ruang Langkahku</span>
+<span class="material-symbols-outlined text-[20px]">login</span>
+</button>
+</form>
+<!-- Helper Links -->
+<div class="pt-space-xs flex flex-wrap items-center justify-between gap-space-sm text-text-secondary">
+<a class="font-caption text-caption hover:text-text-primary inline-flex items-center gap-1" href="#" onclick="event.preventDefault(); switchAuthTab('status');">
+<span class="material-symbols-outlined text-[15px]">info</span>
+<span>Akun belum aktif? Periksa verifikasi</span>
+</a>
+<a class="font-caption text-caption text-primary hover:underline inline-flex items-center gap-1" href="#" onclick="event.preventDefault(); switchAuthTab('register');">
+<span>Buat Akun Siswa Baru</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- TAB CONTENT 2: Pendaftaran Mandiri Siswa (Hidden by Default) -->
+<div class="hidden flex-col gap-space-lg" id="tab-content-register">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1.5 text-feedback-warning-text bg-feedback-warning-bg px-2.5 py-1 rounded-full font-caption text-caption self-start">
+<span class="material-symbols-outlined text-[15px]">badge</span>
+<span>Khusus Siswa SMA/SMK Kelas XI–XII</span>
+</div>
+<h2 class="font-headline-card text-headline-card text-text-primary mt-1">
+              Pendaftaran Mandiri Siswa
+            </h2>
+<p class="font-body-default text-body-default text-text-secondary">
+              Buat akun tanpa membagikan nomor HP atau media sosial. Cukup nama panggil dan username pilihanmu.
+            </p>
+</div>
+<form class="flex flex-col gap-space-sm" onsubmit="event.preventDefault(); handleRegisterSubmit();">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-field text-label-field text-text-primary" for="reg-name">Nama Lengkap Siswa</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-lowest text-text-primary font-body-default text-body-default placeholder:text-text-secondary shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container" id="reg-name" placeholder="Sesuai daftar absen" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-field text-label-field text-text-primary" for="reg-nisn">NISN (10 Digit)</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-lowest text-text-primary font-body-default text-body-default placeholder:text-text-secondary shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container" id="reg-nisn" maxlength="10" placeholder="10 digit nomor NISN" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-field text-label-field text-text-primary" for="reg-school">Pilih Nama Sekolah</label>
+<select class="w-full h-11 px-3 rounded-xl bg-surface-container-lowest text-text-primary font-body-default text-body-default shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container" id="reg-school" required="">
+<option value="">Pilih SMA/SMK Terdaftar...</option>
+<option value="sman1">SMAN 1 Kota Harapan</option>
+<option value="sman3">SMAN 3 Budi Luhur</option>
+<option value="smkn2">SMKN 2 Gemilang Mandiri</option>
+<option value="other">Sekolah Belum Terdaftar (Ajukan)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-field text-label-field text-text-primary" for="reg-class">Tingkat Kelas</label>
+<select class="w-full h-11 px-3 rounded-xl bg-surface-container-lowest text-text-primary font-body-default text-body-default shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container" id="reg-class" required="">
+<option value="XI">Kelas XI (Persiapan Peminatan)</option>
+<option value="XII">Kelas XII (Finalisasi SNPMB &amp; Karier)</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-field text-label-field text-text-primary" for="reg-username">Pilihan Username (ID Akun)</label>
+<div class="relative">
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-lowest text-text-primary font-body-default text-body-default placeholder:text-text-secondary shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container" id="reg-username" placeholder="Contoh: rani.kh" required="" type="text"/>
+</div>
+<span class="font-caption text-caption text-text-secondary">Username ini akan dipakai masuk bersama kata sandi.</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-field text-label-field text-text-primary" for="reg-password">Kata Sandi Baru</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-lowest text-text-primary font-body-default text-body-default placeholder:text-text-secondary shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container" id="reg-password" placeholder="Minimal 8 karakter" required="" type="password"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-field text-label-field text-text-primary" for="reg-confirm">Konfirmasi Kata Sandi</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-lowest text-text-primary font-body-default text-body-default placeholder:text-text-secondary shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container" id="reg-confirm" placeholder="Ketik ulang sandi" required="" type="password"/>
+</div>
+</div>
+<!-- Agreement Box -->
+<label class="flex items-start gap-2.5 mt-2 cursor-pointer">
+<input class="mt-1 w-4 h-4 rounded text-primary-container focus:ring-primary-container" required="" type="checkbox"/>
+<span class="font-caption text-caption text-text-secondary">
+                Saya memahami data refleksi saya dilindungi UU PDP dan hanya dibagikan kepada Guru BK sekolah yang berwenang atas persetujuan saya.
+              </span>
+</label>
+<button class="w-full h-12 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-body-strong text-body-strong flex items-center justify-center gap-2 shadow-sm transition-colors mt-2" type="submit">
+<span>Ajukan Pendaftaran Siswa</span>
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+</button>
+</form>
+<p class="font-caption text-caption text-center text-text-secondary">
+            Sudah punya akun terdaftar? <a class="text-primary font-label-field hover:underline" href="#" onclick="event.preventDefault(); switchAuthTab('login');">Masuk di sini</a>
+</p>
+</div>
+<!-- TAB CONTENT 3: Cek Status Verifikasi Pendaftaran (Hidden by Default) -->
+<div class="hidden flex-col gap-space-lg" id="tab-content-status">
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-card text-headline-card text-text-primary">
+              Cek Status Pendaftaran
+            </h2>
+<p class="font-body-default text-body-default text-text-secondary">
+              Setelah mendaftar, Superadmin sekolah akan mencocokkan data rombelmu dalam 1x24 jam kerja sekolah.
+            </p>
+</div>
+<form class="flex flex-col gap-space-md" onsubmit="event.preventDefault(); checkRegistrationStatus();">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-field text-label-field text-text-primary" for="status-nisn">Nomor NISN Siswa</label>
+<input class="w-full h-12 px-4 rounded-xl bg-surface-container-lowest text-text-primary font-body-default text-body-default placeholder:text-text-secondary shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container" id="status-nisn" maxlength="10" placeholder="Masukkan 10 digit NISN yang didaftarkan..." required="" type="text"/>
+</div>
+<button class="w-full h-12 rounded-xl bg-surface-container-highest hover:bg-surface-variant text-text-primary font-body-strong text-body-strong flex items-center justify-center gap-2 shadow-sm transition-colors" type="submit">
+<span class="material-symbols-outlined text-[20px]">manage_search</span>
+<span>Cek Status Verifikasi</span>
+</button>
+</form>
+<!-- Result Simulation Box (Interactive dynamic display) -->
+<div class="p-space-md rounded-xl bg-feedback-success-bg text-feedback-success-text flex flex-col gap-2" id="status-result-box">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span class="font-label-field text-label-field">Alur Verifikasi Aktif Terkini</span>
+</div>
+<p class="font-caption text-caption text-text-secondary">
+              Data pendaftaran baru dari <strong class="text-text-primary">SMAN 1 Kota Harapan</strong> diproses secara berkala oleh tim Bimbingan Konseling pada hari Senin–Jumat pukul 07.30–15.30 WIB.
+            </p>
+</div>
+<button class="font-caption text-caption text-primary hover:underline text-center" onclick="switchAuthTab('login')" type="button">
+            ← Kembali ke form masuk akun
+          </button>
+</div>
+</div>
+<!-- Contextual Callout Below Login Box -->
+<div class="p-space-lg rounded-2xl bg-domain-kenali-diriku text-text-primary flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-surface-card flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">contact_support</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-field text-label-field">Guru BK atau Pengelola Sekolah Baru?</span>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+            Akun Guru BK dan Superadmin didistribusikan melalui Dinas Pendidikan atau MoU Resmi Sekolah. Ingin mengaktifkan LANGKAHKU di sekolahmu?
+          </p>
+<a class="font-caption text-caption text-primary font-label-field hover:underline inline-flex items-center gap-1 mt-1" href="#">
+<span>Pelajari Alur Integrasi Sekolah</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Lower Showcase: Privacy-First Onboarding & Transparency Architecture -->
+<section class="flex flex-col gap-space-xl pt-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1 max-w-xl">
+<div class="inline-flex items-center gap-2 px-space-sm py-1 rounded-full bg-domain-timbang-pilihan text-primary font-caption text-caption self-start">
+<span class="material-symbols-outlined text-[15px]">shield</span>
+<span>Prinsip Perlindungan Siswa</span>
+</div>
+<h2 class="font-headline-page text-headline-card md:text-headline-page text-text-primary">
+          Transparansi Alur &amp; Persetujuan Akun
+        </h2>
+<p class="font-body-default text-body-default text-text-secondary">
+          Kami memprioritaskan rasa aman dan kemerdekaan berpikir setiap murid. Tidak ada data yang diperjualbelikan atau dinilai secara kompetitif.
+        </p>
+</div>
+<div class="flex items-center gap-2 text-text-secondary font-caption text-caption bg-surface-container px-space-md py-2 rounded-xl">
+<span class="material-symbols-outlined text-[18px] text-feedback-success-text">lock</span>
+<span>Standar Kepatuhan UU Perlindungan Data Pribadi</span>
+</div>
+</div>
+<!-- 3 Clean Step Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Card 1 -->
+<div class="p-space-xl rounded-2xl bg-surface-card shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<div class="w-12 h-12 rounded-xl bg-domain-kenali-diriku text-primary flex items-center justify-center font-headline-card text-headline-card">
+          1
+        </div>
+<div class="flex flex-col gap-1.5">
+<h3 class="font-headline-card text-headline-card text-text-primary">Pendaftaran Mandiri Siswa</h3>
+<p class="font-body-default text-body-default text-text-secondary leading-relaxed">
+            Siswa memilih username unik dan kata sandi tanpa kewajiban menautkan akun media sosial, nomor telepon pribadi, atau pelacakan lokasi.
+          </p>
+</div>
+<div class="mt-auto pt-space-md flex items-center gap-2 text-text-secondary font-caption text-caption">
+<span class="material-symbols-outlined text-[16px] text-feedback-success-text">check</span>
+<span>Bebas spam • Verifikasi minim beban</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-xl rounded-2xl bg-surface-card shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<div class="w-12 h-12 rounded-xl bg-domain-rencana-langkahku text-feedback-warning-text flex items-center justify-center font-headline-card text-headline-card">
+          2
+        </div>
+<div class="flex flex-col gap-1.5">
+<h3 class="font-headline-card text-headline-card text-text-primary">Verifikasi Superadmin Sekolah</h3>
+<p class="font-body-default text-body-default text-text-secondary leading-relaxed">
+            Petugas sekolah memvalidasi NISN dan status aktif siswa secara internal. Hal ini menjamin ruang belajar hanya diisi oleh komunitas sekolah yang sah.
+          </p>
+</div>
+<div class="mt-auto pt-space-md flex items-center gap-2 text-text-secondary font-caption text-caption">
+<span class="material-symbols-outlined text-[16px] text-feedback-success-text">check</span>
+<span>Verifikasi terpisah &amp; etis</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-xl rounded-2xl bg-surface-card shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<div class="w-12 h-12 rounded-xl bg-domain-peta-jalur text-feedback-success-text flex items-center justify-center font-headline-card text-headline-card">
+          3
+        </div>
+<div class="flex flex-col gap-1.5">
+<h3 class="font-headline-card text-headline-card text-text-primary">Ruang Aman &amp; Terarah</h3>
+<p class="font-body-default text-body-default text-text-secondary leading-relaxed">
+            Akun aktif membuka refleksi diri, katalog pilihan kuliah/karier, serta buku catatan pribadi yang tidak bisa diintip orang lain tanpa izinmu.
+          </p>
+</div>
+<div class="mt-auto pt-space-md flex items-center gap-2 text-text-secondary font-caption text-caption">
+<span class="material-symbols-outlined text-[16px] text-feedback-success-text">check</span>
+<span>Bimbingan kolaboratif bersama BK</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Safety & Emotional Support Banner -->
+<section class="p-space-xl rounded-2xl bg-feedback-warning-bg text-text-primary flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg shadow-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-card text-feedback-warning-text flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">support_agent</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-card text-headline-card">Butuh pendampingan atau sedang merasa kewalahan?</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-card text-feedback-warning-text font-caption text-caption font-semibold">Tersedia Kapan Saja</span>
+</div>
+<p class="font-body-default text-body-default text-feedback-warning-text max-w-2xl">
+          Memikirkan masa depan memang bisa menimbulkan cemas. Kamu tidak harus menyelesaikan semuanya hari ini. Ruang konseling sekolah siap mendengarkan tanpa menghakimi.
+        </p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm w-full lg:w-auto shrink-0">
+<a class="h-11 px-space-md rounded-xl bg-surface-card text-text-primary hover:bg-surface-container font-label-field text-label-field flex items-center gap-2 shadow-sm transition-colors" href="tel:119">
+<span class="material-symbols-outlined text-[18px] text-feedback-error-text">phone_in_talk</span>
+<span>SEJIWA 119 Ext 8 (Bebas Pulsa)</span>
+</a>
+<a class="h-11 px-space-md rounded-xl bg-primary-container text-on-primary hover:bg-primary font-label-field text-label-field flex items-center gap-2 shadow-sm transition-colors" data-path="bantuan" href="#">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Jadwal Bimbingan BK Sekolah</span>
+</a>
+</div>
+</section>
+<!-- Lightweight Modal for Password Recovery & Assistance (Vanilla JS Controlled) -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-text-primary/40 backdrop-blur-sm p-4" id="recovery-modal">
+<div class="w-full max-w-md bg-surface-card rounded-2xl p-space-xl shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">key</span>
+<span class="font-headline-card text-headline-card text-text-primary">Pemulihan Sandi Siswa</span>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-text-secondary hover:text-text-primary" onclick="closePasswordRecoveryModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-default text-body-default text-text-secondary leading-relaxed">
+        Untuk melindungi kerahasiaan murid tanpa meminta nomor handphone, reset kata sandi dilakukan melalui <strong>Kode Pemulihan Sekolah</strong> atau bantuan langsung oleh <strong>Guru BK</strong> di ruang bimbingan.
+      </p>
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-low">
+<span class="font-label-field text-label-field text-text-primary">Langkah Mudah:</span>
+<ul class="font-caption text-caption text-text-secondary list-disc list-inside space-y-1">
+<li>Temui Guru BK saat jam istirahat atau kelas bimbingan.</li>
+<li>Sebutkan nama dan NISN untuk menerbitkan token sandi baru.</li>
+<li>Atau hubungi Superadmin SIM Sekolah jika di luar jam operasional.</li>
+</ul>
+</div>
+<button class="w-full h-11 rounded-xl bg-primary-container text-on-primary font-label-field text-label-field flex items-center justify-center" onclick="closePasswordRecoveryModal()" type="button">
+        Mengerti, Terima Kasih
+      </button>
+</div>
+</div>
+<!-- Notification Toast Simulation -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2 px-space-md py-3 rounded-xl bg-primary text-on-primary shadow-xl" id="toast-feedback">
+<span class="material-symbols-outlined text-[20px]" id="toast-icon">check</span>
+<span class="font-body-default text-body-default" id="toast-text">Pemberitahuan</span>
+</div>
+</div>
+<script>
+  function switchAuthTab(tabName) {
+    // Hide all contents
+    const contents = ['login', 'register', 'status'];
+    contents.forEach(function(item) {
+      const el = document.getElementById('tab-content-' + item);
+      const btn = document.getElementById('tab-btn-' + item);
+      if (el) {
+        if (item === tabName) {
+          el.classList.remove('hidden');
+          el.classList.add('flex');
+        } else {
+          el.classList.add('hidden');
+          el.classList.remove('flex');
+        }
+      }
+      if (btn) {
+        if (item === tabName) {
+          btn.setAttribute('aria-selected', 'true');
+          btn.classList.add('bg-surface-card', 'text-primary', 'shadow-sm');
+          btn.classList.remove('text-text-secondary');
+        } else {
+          btn.setAttribute('aria-selected', 'false');
+          btn.classList.remove('bg-surface-card', 'text-primary', 'shadow-sm');
+          btn.classList.add('text-text-secondary');
+        }
+      }
+    });
+  }
+
+  function togglePasswordVisibility(inputId, btn) {
+    const input = document.getElementById(inputId);
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (input.type === 'password') {
+      input.type = 'text';
+      if (icon) icon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      if (icon) icon.textContent = 'visibility';
+    }
+  }
+
+  function showToast(message, iconName) {
+    const toast = document.getElementById('toast-feedback');
+    const toastText = document.getElementById('toast-text');
+    const toastIcon = document.getElementById('toast-icon');
+    if (!toast) return;
+
+    toastText.textContent = message;
+    if (iconName && toastIcon) toastIcon.textContent = iconName;
+
+    toast.classList.remove('translate-y-20', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(function() {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-20', 'opacity-0');
+    }, 3500);
+  }
+
+  function handleLoginSubmit() {
+    const userField = document.getElementById('username-input');
+    const val = userField ? userField.value.trim().toLowerCase() : '';
+    
+    // Demonstrate role auto-recognition behavior without dropdown
+    if (val.startsWith('bk.')) {
+      showToast('Login berhasil sebagai Guru BK. Mengalihkan...', 'account_balance');
+    } else if (val.startsWith('admin.')) {
+      showToast('Login berhasil sebagai Superadmin Sekolah...', 'admin_panel_settings');
+    } else {
+      showToast('Selamat datang di Ruang Belajar Langkahku!', 'check_circle');
+    }
+  }
+
+  function handleRegisterSubmit() {
+    showToast('Pengajuan akun diterima! Menunggu verifikasi admin sekolah.', 'hourglass_top');
+    setTimeout(function() {
+      switchAuthTab('status');
+    }, 1200);
+  }
+
+  function checkRegistrationStatus() {
+    const nisn = document.getElementById('status-nisn').value.trim();
+    const resultBox = document.getElementById('status-result-box');
+    if (!nisn) return;
+    
+    if (resultBox) {
+      resultBox.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[20px] text-feedback-success-text">schedule</span>
+          <span class="font-label-field text-label-field text-text-primary">Status NISN ${nisn}: Menunggu Pencocokan Rombel</span>
+        </div>
+        <p class="font-caption text-caption text-text-secondary">
+          Data pendaftaran telah terkirim ke Guru BK SMAN 1 Kota Harapan. Silakan hubungi konselor sekolah bila membutuhkan aktivasi kilat sebelum jam bimbingan.
+        </p>
+      `;
+      resultBox.className = "p-space-md rounded-xl bg-feedback-warning-bg text-text-primary flex flex-col gap-2";
+    }
+    showToast('Status NISN diperbarui.', 'info');
+  }
+
+  function showPasswordRecoveryModal() {
+    const modal = document.getElementById('recovery-modal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+  }
+
+  function closePasswordRecoveryModal() {
+    const modal = document.getElementById('recovery-modal');
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+</script></div></main><footer class="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(0,0,0,0.02)] mt-auto"><div class="max-w-[1200px] mx-auto px-space-md lg:px-margin py-space-3xl flex flex-col gap-space-2xl"><div class="flex flex-col lg:flex-row items-start justify-between gap-space-2xl"><div class="max-w-md"><div class="flex items-center gap-space-sm mb-space-xs"><div class="w-7 h-7 rounded-lg bg-primary-container flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[16px]">route</span></div><span class="font-headline-card text-headline-card text-primary">LANGKAHKU</span></div><p class="font-body-default text-body-default text-text-secondary mb-space-md">Platform bimbingan eksplorasi masa depan untuk siswa SMA/SMK kelas XI–XII di seluruh Indonesia. Berpegang pada prinsip kejelasan, ketenangan batin, dan pendampingan terarah tanpa tekanan.</p><div class="flex items-center gap-space-xs text-feedback-success-text bg-feedback-success-bg px-space-sm py-1 rounded-full font-caption text-caption inline-flex"><span class="material-symbols-outlined text-[16px]">verified_user</span><span>Kepatuhan Standar Bimbingan Konseling Sekolah &amp; UU PDP</span></div></div><div class="grid grid-cols-2 sm:grid-cols-3 gap-space-xl"><div class="flex flex-col gap-space-xs"><span class="font-label-field text-label-field text-text-primary">Eksplorasi</span><a class="font-label-metadata text-label-metadata text-text-secondary hover:text-on-surface" data-path="peta-jalur-publik" href="#">Jalur Kuliah S1/D4</a><a class="font-label-metadata text-label-metadata text-text-secondary hover:text-on-surface" data-path="peta-jalur-publik" href="#">Pendidikan Vokasi</a><a class="font-label-metadata text-label-metadata text-text-secondary hover:text-on-surface" data-path="peta-jalur-publik" href="#">Kedinasan &amp; Ikatan Dinas</a><a class="font-label-metadata text-label-metadata text-text-secondary hover:text-on-surface" data-path="peta-jalur-publik" href="#">Karier &amp; Magang Langsung</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-field text-label-field text-text-primary">Dukungan</span><a class="font-label-metadata text-label-metadata text-text-secondary hover:text-on-surface" data-path="panduan-orang-tua" href="#">Dialog Orang Tua &amp; Anak</a><a class="font-label-metadata text-label-metadata text-text-secondary hover:text-on-surface" data-path="bantuan" href="#">Pusat Konseling</a><a class="font-label-metadata text-label-metadata text-text-secondary hover:text-on-surface" data-path="bantuan" href="#">FAQ &amp; Kebijakan Privasi</a></div><div class="flex flex-col gap-space-xs col-span-2 sm:col-span-1"><span class="font-label-field text-label-field text-text-primary">Filosofi Kami</span><p class="font-caption text-caption text-text-secondary italic leading-relaxed">"Pelan-pelan, yang penting mulai." Perjalanan setiap anak muda memiliki ritme dan keunikan masing-masing.</p></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-sm"><p class="font-caption text-caption text-text-secondary">© 2024 LANGKAHKU. Hak Cipta Dilindungi. Dikembangkan bersama konselor sekolah untuk masa depan pendidikan Indonesia.</p><div class="flex items-center gap-space-lg font-caption text-caption text-text-secondary"><a class="hover:text-on-surface" data-path="bantuan" href="#">Privasi Data Siswa</a><a class="hover:text-on-surface" data-path="bantuan" href="#">Syarat Layanan</a><a class="hover:text-on-surface" data-path="bantuan" href="#">Hubungi Konselor</a></div></div></div></footer></body></html>

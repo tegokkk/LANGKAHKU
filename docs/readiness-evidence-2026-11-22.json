@@ -1,0 +1,169 @@
+{
+  "checkedAt": "2026-11-22 22:56:26",
+  "timezone": "Asia/Bangkok",
+  "environment": {
+    "mode": "development",
+    "demo": true,
+    "retentionEnabled": false,
+    "https": false,
+    "staticServingConfigured": false
+  },
+  "http": [
+    {
+      "path": "/api/v1/health/live",
+      "status": 200,
+      "expected": 200,
+      "passed": true,
+      "cache": "no-store, private",
+      "requestIdPresent": true
+    },
+    {
+      "path": "/api/v1/health",
+      "status": 200,
+      "expected": 200,
+      "passed": true,
+      "cache": "no-store, private",
+      "requestIdPresent": true
+    },
+    {
+      "path": "/api/v1/health/ready",
+      "status": 200,
+      "expected": 200,
+      "passed": true,
+      "cache": "no-store, private",
+      "requestIdPresent": true
+    },
+    {
+      "path": "/api/v1/auth/me",
+      "status": 200,
+      "expected": 200,
+      "passed": true,
+      "cache": "no-store, private",
+      "requestIdPresent": true,
+      "demo": true
+    },
+    {
+      "path": "/api/v1/public/content",
+      "status": 200,
+      "expected": 200,
+      "passed": true,
+      "cache": "no-store, private",
+      "requestIdPresent": true,
+      "demo": true,
+      "itemCount": 26
+    },
+    {
+      "path": "/api/v1/student/home",
+      "status": 401,
+      "expected": 401,
+      "passed": true,
+      "cache": "no-store, private",
+      "requestIdPresent": true,
+      "errorCode": "SESSION_EXPIRED"
+    },
+    {
+      "path": "/api/v1/bk/consultations",
+      "status": 401,
+      "expected": 401,
+      "passed": true,
+      "cache": "no-store, private",
+      "requestIdPresent": true,
+      "errorCode": "SESSION_EXPIRED"
+    },
+    {
+      "path": "/api/v1/admin/registrations",
+      "status": 401,
+      "expected": 401,
+      "passed": true,
+      "cache": "no-store, private",
+      "requestIdPresent": true,
+      "errorCode": "SESSION_EXPIRED"
+    }
+  ],
+  "preflight": {
+    "ok": false,
+    "checks": [
+      {
+        "id": "production-mode",
+        "ok": false,
+        "action": "Gunakan NODE_ENV=production dan DEMO_MODE=false."
+      },
+      {
+        "id": "https-origin",
+        "ok": false,
+        "action": "Konfigurasikan domain HTTPS dan reverse proxy."
+      },
+      {
+        "id": "retention-policy",
+        "ok": false,
+        "action": "Sahkan jadwal retensi sekolah, lalu aktifkan retensi otomatis."
+      },
+      {
+        "id": "database-migrations",
+        "ok": true,
+        "action": "Migrasi database lengkap."
+      },
+      {
+        "id": "retention-worker",
+        "ok": false,
+        "action": "Jalankan worker dan periksa heartbeat/penghapusan gagal."
+      },
+      {
+        "id": "runtime-db-role",
+        "ok": false,
+        "action": "Gunakan role runtime tanpa superuser, CREATE DATABASE/ROLE, atau CREATE pada schema public."
+      },
+      {
+        "id": "school-registration",
+        "ok": true,
+        "action": "Setiap sekolah yang membuka pendaftaran memerlukan superadmin dan guru BK aktif."
+      },
+      {
+        "id": "verified-catalog",
+        "ok": false,
+        "action": "Terbitkan materi non-demo bersumber dan masih berlaku untuk keempat kategori jalur di tiap sekolah."
+      },
+      {
+        "id": "school-services",
+        "ok": false,
+        "action": "Guru BK perlu mengisi kontak bantuan, jam layanan, estimasi respons, penanggung jawab, dan tanggal verifikasi aktual."
+      },
+      {
+        "id": "student-retention-dates",
+        "ok": false,
+        "action": "Hubungkan siswa aktif ke angkatan dengan tanggal penghapusan yang disahkan."
+      },
+      {
+        "id": "deletion-ledger",
+        "ok": false,
+        "action": "Sediakan ledger penghapusan persisten yang dapat dibaca/ditulis worker dan disalin di luar backup database."
+      },
+      {
+        "id": "frontend-build",
+        "ok": false,
+        "action": "Atur STATIC_DIR untuk deployment satu origin, atau verifikasi hosting frontend terpisah secara manual."
+      },
+      {
+        "id": "recent-encrypted-backup",
+        "ok": false,
+        "action": "Jalankan backup terenkripsi dan sediakan BACKUP_DIRECTORY persisten."
+      }
+    ]
+  },
+  "preflightPassed": 2,
+  "preflightTotal": 13,
+  "worker": [],
+  "content": [
+    {
+      "demo": true,
+      "status": "published",
+      "count": 26
+    }
+  ],
+  "bundle": {
+    "filesScanned": 20,
+    "demoPasswordIncludedInScan": true,
+    "secretMatches": []
+  },
+  "dockerAvailable": false
+}
