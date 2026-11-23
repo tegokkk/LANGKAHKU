@@ -32,7 +32,6 @@ import { useAuth } from "../context/AuthContext";
 import { useOnline } from "../hooks/useResource";
 import { Button, Banner, ViewTransition, usePanel } from "../components/ui";
 import AdaptiveNavPill from "../components/ui/AdaptiveNavPill";
-import AsmrBackground from "../components/ui/AsmrBackground";
 import { HelpPanel, SettingsPanel } from "../components/panels/AccountPanels";
 
 const studentLinks = [
@@ -137,7 +136,6 @@ export default function AppLayout() {
     <div
       className={`app${staff ? " staff-app" : ""}${authRoute ? " auth-app" : ""}`}
     >
-      <AsmrBackground />
       <a href="#main" className="skip-link">
         Lewati ke isi utama
       </a>

@@ -16,7 +16,6 @@ import {
   usePanel,
 } from "../components/ui";
 import { SettingsPanel } from "../components/panels/AccountPanels";
-import TextRoll from "../components/ui/TextRoll";
 import LoginCard from "../features/auth/LoginCard";
 
 export default function AccessPage() {
@@ -196,17 +195,15 @@ export default function AccessPage() {
                 <Clock3 size={30} aria-hidden="true" />
               </div>
               <h1>
-                <TextRoll key={user.active ? "active" : user.status}>
-                  {user.active
-                    ? "Akunmu siap digunakan"
-                    : user.status === "rejected"
-                      ? "Pendaftaran belum disetujui"
-                      : user.status === "suspended"
-                        ? "Akun sedang dinonaktifkan"
-                        : user.status === "approved"
-                          ? "Satu persetujuan lagi"
-                          : "Langkah pertamamu sudah diterima"}
-                </TextRoll>
+                {user.active
+                  ? "Akunmu siap digunakan"
+                  : user.status === "rejected"
+                    ? "Pendaftaran belum disetujui"
+                    : user.status === "suspended"
+                      ? "Akun sedang dinonaktifkan"
+                      : user.status === "approved"
+                        ? "Satu persetujuan lagi"
+                        : "Langkah pertamamu sudah diterima"}
               </h1>
               <p>
                 Pantau keputusan pendaftaran di sini. Persetujuan akun dan izin
@@ -276,15 +273,13 @@ export default function AccessPage() {
           ) : (
             <>
               <h1>
-                <TextRoll key={tab}>
-                  {tab === "register"
-                    ? "Mulai langkah pertamamu"
-                    : tab === "recover"
-                      ? "Pulihkan akses akun"
-                      : tab === "status"
-                        ? "Masuk untuk melihat keputusan"
-                        : "Selamat datang kembali"}
-                </TextRoll>
+                {tab === "register"
+                  ? "Mulai langkah pertamamu"
+                  : tab === "recover"
+                    ? "Pulihkan akses akun"
+                    : tab === "status"
+                      ? "Masuk untuk melihat keputusan"
+                      : "Selamat datang kembali"}
               </h1>
               <p>
                 {tab === "register"

@@ -21,7 +21,6 @@ import {
 import { useAuth } from "../context/AuthContext";
 import { useResource } from "../hooks/useResource";
 import { Loading, Empty, Badge, Button, usePanel, date } from "../components/ui";
-import TextRoll from "../components/ui/TextRoll";
 import Reveal from "../components/ui/Reveal";
 
 const spaces = [
@@ -136,12 +135,12 @@ export default function LandingPage() {
             ARAHMU
           </span>
           <h1 className="hero-stagger-2">
-            <TextRoll>Masa depanmu,</TextRoll>
+            Masa depanmu,
             <br />
             <span>
-              <TextRoll>dimulai dari</TextRoll>
+              dimulai dari
               <br />
-              <TextRoll>satu langkah.</TextRoll>
+              satu langkah.
             </span>
           </h1>
           <p className="hero-stagger-3">

@@ -19,7 +19,6 @@ import {
   Flower2,
 } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
-import TextRoll from "./ui/TextRoll";
 
 export const Button = ({
   children,
@@ -181,9 +180,7 @@ export const PageTitle = ({ eyebrow, title, children, actions }) => (
   <div className="page-title">
     <div>
       {eyebrow && <span className="eyebrow">{eyebrow}</span>}
-      <h1>
-        <TextRoll key={title}>{title}</TextRoll>
-      </h1>
+      <h1>{title}</h1>
       {children && <p>{children}</p>}
     </div>
     {actions && <div className="actions">{actions}</div>}
