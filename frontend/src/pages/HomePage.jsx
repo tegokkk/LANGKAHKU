@@ -33,14 +33,6 @@ const spaces = [
     "blush",
   ],
   [
-    "exploration",
-    "Peta Jalur",
-    "Ada banyak jalan setelah sekolah. Temukan dan pelajari pilihanmu.",
-    "/peta-jalur",
-    Compass,
-    "sage",
-  ],
-  [
     "comparison",
     "Timbang Pilihan",
     "Lihat setiap pilihan dari sudut pandang dan keadaanmu.",
@@ -81,7 +73,7 @@ export default function HomePage() {
     );
   const { progress, plan, latest } = resource.data,
     count = spaces.filter(([key]) => progress[key]).length,
-    next = spaces.find(([key]) => !progress[key]) || spaces[3],
+    next = spaces.find(([key]) => !progress[key]) || spaces[spaces.length - 1],
     step = plan?.steps?.find((x) => !x.done),
     doneSteps = plan?.steps?.filter((x) => x.done).length || 0,
     totalSteps = plan?.steps?.length || 0;
@@ -103,7 +95,7 @@ export default function HomePage() {
             yang penting mulai.
           </h2>
           <p>
-            {count} dari 4 langkah inti telah kamu tinjau.
+            {count} dari {spaces.length} langkah inti telah kamu tinjau.
             <br />
             Setiap langkah kecil membantu melihat arah lebih jelas.
           </p>
@@ -177,7 +169,7 @@ export default function HomePage() {
             </small>
           )}
         </div>
-        <div className="four-grid space-cards">
+        <div className="three-grid space-cards">
           {spaces.map(([key, title, text, to, Icon, color], i) => (
             <article
               key={key}

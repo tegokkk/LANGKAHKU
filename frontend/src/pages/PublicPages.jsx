@@ -43,9 +43,8 @@ export function AboutPage() {
         eyebrow="TENTANG LANGKAHKU"
         title="Langkah kecil, arah yang lebih jelas."
         actions={
-          <Link className="button" to="/peta-jalur">
-            <Compass size={18} aria-hidden="true" />
-            Jelajahi Peta Jalur
+          <Link className="button" to="/daftar">
+            Daftar akun siswa
           </Link>
         }
       >
@@ -260,8 +259,8 @@ export function StoriesPage() {
         eyebrow="CERITA LANGKAH"
         title="Belajar dari perjalanan mereka yang pernah berada di posisimu."
         actions={
-          <Link className="button secondary" to="/peta-jalur">
-            Kembali ke Peta Jalur
+          <Link className="button secondary" to="/">
+            Kembali ke Halaman Utama
           </Link>
         }
       >
@@ -700,8 +699,8 @@ export function DownloadsPage() {
         eyebrow="UNDUHAN & AKSES LURING"
         title="Bawa materi publik dan lembar kerja untuk dibaca tanpa kuota."
         actions={
-          <Link className="button secondary" to="/peta-jalur">
-            Buka katalog Peta Jalur
+          <Link className="button secondary" to="/cerita-langkah">
+            Baca Cerita Langkah
           </Link>
         }
       >

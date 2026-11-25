@@ -203,8 +203,8 @@ export default function ReflectionPage() {
                     Konfirmasi ringkasan
                   </Button>
                   {doc.reviewed && (
-                    <Link className="button secondary" to="/peta-jalur">
-                      Jelajahi jalur
+                    <Link className="button secondary" to="/timbang-pilihan">
+                      Timbang pilihan
                     </Link>
                   )}
                 </>

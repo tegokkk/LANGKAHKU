@@ -8,7 +8,6 @@ import AccessPage from "./pages/AccessPage";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const ReflectionPage = lazy(() => import("./pages/ReflectionPage"));
-const PathwaysPage = lazy(() => import("./pages/PathwaysPage"));
 const PlanPage = lazy(() => import("./pages/PlanPage"));
 const ConsultationPage = lazy(() => import("./pages/ConsultationPage"));
 const ApprovalsPage = lazy(() => import("./pages/ApprovalsPage"));
@@ -86,7 +85,6 @@ export default function App() {
           ))}
           <Route path="/tentang" element={<AboutPage />} />
           <Route path="/cara-menggunakan" element={<HowToUsePage />} />
-          <Route path="/peta-jalur" element={<PathwaysPage />} />
           <Route path="/cerita-langkah" element={<StoriesPage />} />
           <Route path="/panduan-orang-tua" element={<ParentsGuidePage />} />
           <Route path="/faq" element={<FaqPage />} />

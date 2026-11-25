@@ -34,14 +34,6 @@ const spaces = [
   ],
   [
     "Langkah 02",
-    "Peta Jalur",
-    "Eksplorasi jalur kuliah, kerja, kuliah sambil kerja, usaha mandiri, dan profesi dengan rujukan sumber resmi.",
-    "/peta-jalur",
-    Compass,
-    "sage",
-  ],
-  [
-    "Langkah 03",
     "Timbang Pilihan",
     "Bandingkan 2–3 pilihan berdasarkan minat, kemampuan, biaya, dukungan keluarga, dan peluang tanpa penentu otomatis.",
     "/timbang-pilihan",
@@ -49,7 +41,7 @@ const spaces = [
     "lavender",
   ],
   [
-    "Langkah 04",
+    "Langkah 03",
     "Rencana Langkahku",
     "Susun tujuan utama, rencana cadangan, serta checklist langkah kecil per semester XI dan XII yang siap dicetak.",
     "/rencana",
@@ -120,9 +112,6 @@ export default function LandingPage() {
             {date(item.reviewed_at)} · Versi {item.version}
           </small>
         </div>
-        <Link className="button" to="/peta-jalur">
-          Buka di Peta Jalur
-        </Link>
       </div>,
     );
 
@@ -165,10 +154,6 @@ export default function LandingPage() {
                 </Link>
               </>
             )}
-            <Link className="button ghost" to="/peta-jalur">
-              <Compass size={18} aria-hidden="true" />
-              Jelajah jalur
-            </Link>
           </div>
         </div>
 
@@ -288,7 +273,7 @@ export default function LandingPage() {
             </p>
           </div>
         </div>
-        <div className="four-grid space-cards">
+        <div className="three-grid space-cards">
           {spaces.map(([step, title, text, to, Icon, color]) => (
             <article
               key={title}
@@ -300,13 +285,8 @@ export default function LandingPage() {
               </div>
               <h3>{title}</h3>
               <p>{text}</p>
-              <Link
-                className="button white"
-                to={to === "/peta-jalur" ? to : user ? to : "/masuk"}
-              >
-                {to === "/peta-jalur"
-                  ? "Jelajahi katalog"
-                  : "Mulai langkah ini"}
+              <Link className="button white" to={user ? to : "/masuk"}>
+                Mulai langkah ini
               </Link>
             </article>
           ))}
@@ -362,8 +342,8 @@ export default function LandingPage() {
               melihat persiapan kelas XI/XII dan tautan resmi.
             </p>
           </div>
-          <Link className="button secondary small" to="/peta-jalur">
-            Lihat semua ({catalog.loading ? "…" : items.length} materi)
+          <Link className="button secondary small" to="/unduhan">
+            Unduhan materi ({catalog.loading ? "…" : items.length} materi)
           </Link>
         </div>
         {catalog.loading ? (
@@ -542,9 +522,6 @@ export default function LandingPage() {
               Masuk akun
             </Link>
           )}
-          <Link className="button secondary" to="/peta-jalur">
-            Jelajahi Peta Jalur
-          </Link>
         </div>
       </Reveal>
     </div>

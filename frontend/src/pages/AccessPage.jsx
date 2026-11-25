@@ -271,9 +271,6 @@ export default function AccessPage() {
                     Buka ruang langkahku
                   </Link>
                 )}
-                <Link className="button secondary" to="/peta-jalur">
-                  Jelajahi Peta Jalur
-                </Link>
                 <button
                   type="button"
                   className="text-link"

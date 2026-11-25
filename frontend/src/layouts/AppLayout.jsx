@@ -10,7 +10,6 @@ import {
   Footprints,
   House,
   Heart,
-  Compass,
   ListChecks,
   MessagesSquare,
   ChartNoAxesCombined,
@@ -37,14 +36,12 @@ import { HelpPanel, SettingsPanel } from "../components/panels/AccountPanels";
 const studentLinks = [
   ["/beranda", "Beranda", House],
   ["/kenali-diriku", "Diriku", Heart],
-  ["/peta-jalur", "Peta Jalur", Compass],
   ["/rencana", "Rencana", ListChecks],
   ["/sapa-bk", "Sapa BK", MessagesSquare],
 ];
 
 const publicLinks = [
   ["/", "Awal", House],
-  ["/peta-jalur", "Peta Jalur", Compass],
   ["/cerita-langkah", "Cerita", BookOpen],
   ["/panduan-orang-tua", "Orang Tua", Users],
   ["/unduhan", "Unduhan", Download],
@@ -54,7 +51,6 @@ const publicAllPages = [
   ["/", "Halaman Utama"],
   ["/tentang", "Tentang LANGKAHKU"],
   ["/cara-menggunakan", "Cara Menggunakan"],
-  ["/peta-jalur", "Peta Jalur & Profesi"],
   ["/cerita-langkah", "Cerita Langkah"],
   ["/panduan-orang-tua", "Panduan Orang Tua"],
   ["/unduhan", "Unduhan & Lembar Kerja"],
@@ -434,7 +430,6 @@ export default function AppLayout() {
                 </div>
                 <div className="footer-col">
                   <strong>Eksplorasi</strong>
-                  <Link to="/peta-jalur">Peta Jalur & Profesi</Link>
                   <Link to="/cerita-langkah">Cerita Langkah</Link>
                   <Link to="/panduan-orang-tua">Panduan Orang Tua</Link>
                   <Link to="/unduhan">Unduhan & Lembar Kerja</Link>
